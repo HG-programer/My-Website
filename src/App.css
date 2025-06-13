@@ -1,34 +1,47 @@
+/* Define CSS variables for easy theme management */
+:root {
+  --app-bg-color: #282c34;
+  --app-link-color: #61dafb;
+  --app-text-color: #ffffff;
+}
+
+/* Main App container */
 .App {
   text-align: center;
 }
 
+/* Logo styling */
 .App-logo {
   height: 40vmin;
   pointer-events: none;
 }
 
+/* Apply spinning animation if reduced motion is not preferred */
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+    animation: app-logo-spin 20s linear infinite;
   }
 }
 
+/* Header styling */
 .App-header {
-  background-color: #282c34;
+  background-color: var(--app-bg-color);
   min-height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   font-size: calc(10px + 2vmin);
-  color: white;
+  color: var(--app-text-color);
 }
 
+/* Link styling */
 .App-link {
-  color: #61dafb;
+  color: var(--app-link-color);
 }
 
-@keyframes App-logo-spin {
+/* Keyframes for spinning animation */
+@keyframes app-logo-spin {
   from {
     transform: rotate(0deg);
   }
