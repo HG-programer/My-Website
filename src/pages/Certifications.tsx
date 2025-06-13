@@ -1,5 +1,6 @@
 import React from 'react';
 
+// Data for the certifications remains the same
 const certifications = [
   { name: 'Google IT Support', logo: 'https://upload.wikimedia.org/wikipedia/commons/2/2f/Google_2015_logo.svg' },
   { name: 'Amazon Jr. Developer', logo: 'https://upload.wikimedia.org/wikipedia/commons/a/a9/Amazon_logo.svg' },
@@ -8,18 +9,57 @@ const certifications = [
 ];
 
 const Certifications: React.FC = () => (
-  <section className="relative min-h-[60vh] py-12 bg-gradient-to-br from-green-50 via-white to-blue-50 overflow-hidden">
-    {/* Decorative SVG */}
-    <svg className="absolute top-0 left-0 w-full h-40 opacity-20 pointer-events-none" viewBox="0 0 1440 320">
-      <path fill="#34d399" fillOpacity="1" d="M0,160L80,170.7C160,181,320,203,480,197.3C640,192,800,160,960,154.7C1120,149,1280,171,1360,181.3L1440,192L1440,0L1360,0C1280,0,1120,0,960,0C800,0,640,0,480,0C320,0,160,0,80,0L0,0Z"></path>
-    </svg>
-    <div className="relative z-10 max-w-3xl mx-auto">
-      <h1 className="text-3xl font-bold mb-8 text-blue-700 text-center">Certifications</h1>
-      <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
+  // STEP 1: Main container
+  // - `relative`: Creates a "stacking context". Absolutely positioned children
+  //   (like our waves) will be positioned relative to this container.
+  // - `overflow-hidden`: Prevents the background shapes from extending
+  //   beyond the component's boundaries.
+  <section className="relative bg-white py-20 min-h-[70vh] overflow-hidden">
+    
+    {/* STEP 2: Background Decorative Shapes */}
+    {/* We place these shapes first in the code. To send them behind the content,
+        we give them a negative z-index. */}
+
+    {/* Top Green Wave */}
+    <div
+      className="absolute top-0 left-0 w-full h-48 bg-teal-400 -z-10"
+      style={{
+        clipPath: 'ellipse(100% 55% at 50% 45%)', // Creates a simple curve
+      }}
+    ></div>
+
+    {/* Bottom Blue Wave */}
+    <div
+      className="absolute bottom-0 left-0 w-full h-64 bg-blue-600 -z-10"
+      style={{
+        clipPath: 'ellipse(80% 60% at 50% 100%)', // Creates the bottom wave
+      }}
+    ></div>
+
+    {/* STEP 3: Content Container */}
+    {/* This container holds the heading and the certification cards.
+        Because its siblings (the waves) have a negative z-index, this
+        content will automatically appear on top. We don't need to add
+        a z-index here, but using `relative` is good practice. */}
+    <div className="relative max-w-4xl mx-auto px-4">
+      <h1 className="text-4xl font-bold mb-12 text-gray-800 text-center">
+        Certifications
+      </h1>
+
+      <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
         {certifications.map(cert => (
-          <div key={cert.name} className="flex flex-col items-center bg-white p-4 rounded shadow hover:shadow-lg transition">
-            <img src={cert.logo} alt={cert.name} className="h-12 mb-2" />
-            <span className="text-sm font-semibold text-gray-700 text-center">{cert.name}</span>
+          <div
+            key={cert.name}
+            className="flex flex-col items-center justify-center text-center bg-white p-6 rounded-lg shadow-md hover:shadow-xl hover:-translate-y-2 transition-all duration-300"
+          >
+            <img
+              src={cert.logo}
+              alt={`${cert.name} logo`}
+              className="h-16 mb-4 object-contain"
+            />
+            <span className="text-sm font-semibold text-gray-700">
+              {cert.name}
+            </span>
           </div>
         ))}
       </div>
