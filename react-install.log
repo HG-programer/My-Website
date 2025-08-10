@@ -1,0 +1,47 @@
+npm verbose cli C:\Program Files\nodejs\node.exe C:\Program Files\nodejs\node_modules\npm\bin\npm-cli.js
+npm info using npm@10.9.2
+npm info using node@v22.16.0
+npm verbose title npm install react@18.2.0
+npm verbose argv "install" "react@18.2.0" "--loglevel" "verbose" "--no-audit" "--no-fund"
+npm verbose logfile logs-max:10 dir:C:\Users\Harshit\AppData\Local\npm-cache\_logs\2025-08-10T10_03_59_023Z-
+npm verbose logfile C:\Users\Harshit\AppData\Local\npm-cache\_logs\2025-08-10T10_03_59_023Z-debug-0.log
+npm http cache https://registry.npmjs.org/react 163ms (cache hit)
+npm http cache https://registry.npmjs.org/react-dom 109ms (cache hit)
+npm http cache https://registry.npmjs.org/react 131ms (cache hit)
+npm verbose stack Error: unable to resolve dependency tree
+npm verbose stack     at #failPeerConflict (C:\Program Files\nodejs\node_modules\npm\node_modules\@npmcli\arborist\lib\arborist\build-ideal-tree.js:1363:25)
+npm verbose stack     at #loadPeerSet (C:\Program Files\nodejs\node_modules\npm\node_modules\@npmcli\arborist\lib\arborist\build-ideal-tree.js:1329:33)
+npm verbose stack     at async #buildDepStep (C:\Program Files\nodejs\node_modules\npm\node_modules\@npmcli\arborist\lib\arborist\build-ideal-tree.js:904:11)
+npm verbose stack     at async Arborist.buildIdealTree (C:\Program Files\nodejs\node_modules\npm\node_modules\@npmcli\arborist\lib\arborist\build-ideal-tree.js:181:7)
+npm verbose stack     at async Promise.all (index 1)
+npm verbose stack     at async Arborist.reify (C:\Program Files\nodejs\node_modules\npm\node_modules\@npmcli\arborist\lib\arborist\reify.js:131:5)
+npm verbose stack     at async Install.exec (C:\Program Files\nodejs\node_modules\npm\lib\commands\install.js:150:5)
+npm verbose stack     at async Npm.exec (C:\Program Files\nodejs\node_modules\npm\lib\npm.js:207:9)
+npm verbose stack     at async module.exports (C:\Program Files\nodejs\node_modules\npm\lib\cli\entry.js:74:5)
+npm error code ERESOLVE
+npm error ERESOLVE unable to resolve dependency tree
+npm error
+npm error While resolving: my-react-tailwind-app@0.1.0
+npm error Found: react@18.2.0
+npm error node_modules/react
+npm error   react@"18.2.0" from the root project
+npm error
+npm error Could not resolve dependency:
+npm error peer react@"^18.3.1" from react-dom@18.3.1
+npm error node_modules/react-dom
+npm error   react-dom@"^18.2.0" from the root project
+npm error
+npm error Fix the upstream dependency conflict, or retry
+npm error this command with --force or --legacy-peer-deps
+npm error to accept an incorrect (and potentially broken) dependency resolution.
+npm error
+npm error
+npm error For a full report see:
+npm error C:\Users\Harshit\AppData\Local\npm-cache\_logs\2025-08-10T10_03_59_023Z-eresolve-report.txt
+npm verbose cwd C:\Users\Harshit\WEBSITE\My-Website
+npm verbose os Windows_NT 10.0.19045
+npm verbose node v22.16.0
+npm verbose npm  v10.9.2
+npm verbose exit 1
+npm verbose code 1
+npm error A complete log of this run can be found in: C:\Users\Harshit\AppData\Local\npm-cache\_logs\2025-08-10T10_03_59_023Z-debug-0.log

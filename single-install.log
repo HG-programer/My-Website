@@ -1,0 +1,65 @@
+npm verbose cli C:\Program Files\nodejs\node.exe C:\Program Files\nodejs\node_modules\npm\bin\npm-cli.js
+npm info using npm@10.9.2
+npm info using node@v22.16.0
+npm verbose title npm install is-number
+npm verbose argv "install" "is-number" "--no-audit" "--no-fund" "--save-dev" "--loglevel" "verbose"
+npm verbose logfile logs-max:10 dir:C:\Users\Harshit\AppData\Local\npm-cache\_logs\2025-08-10T10_13_21_313Z-
+npm verbose logfile C:\Users\Harshit\AppData\Local\npm-cache\_logs\2025-08-10T10_13_21_313Z-debug-0.log
+npm verbose shrinkwrap failed to load node_modules/.package-lock.json out of date, updated: node_modules
+npm http fetch GET 200 https://registry.npmjs.org/is-number 1457ms (cache revalidated)
+npm http fetch GET 200 https://registry.npmjs.org/eslint 118ms (cache revalidated)
+npm verbose stack Error: could not resolve
+npm verbose stack     at PlaceDep.failPeerConflict (C:\Program Files\nodejs\node_modules\npm\node_modules\@npmcli\arborist\lib\place-dep.js:503:25)
+npm verbose stack     at new PlaceDep (C:\Program Files\nodejs\node_modules\npm\node_modules\@npmcli\arborist\lib\place-dep.js:157:21)
+npm verbose stack     at #buildDepStep (C:\Program Files\nodejs\node_modules\npm\node_modules\@npmcli\arborist\lib\arborist\build-ideal-tree.js:920:18)
+npm verbose stack     at async Arborist.buildIdealTree (C:\Program Files\nodejs\node_modules\npm\node_modules\@npmcli\arborist\lib\arborist\build-ideal-tree.js:181:7)
+npm verbose stack     at async Promise.all (index 1)
+npm verbose stack     at async Arborist.reify (C:\Program Files\nodejs\node_modules\npm\node_modules\@npmcli\arborist\lib\arborist\reify.js:131:5)
+npm verbose stack     at async Install.exec (C:\Program Files\nodejs\node_modules\npm\lib\commands\install.js:150:5)
+npm verbose stack     at async Npm.exec (C:\Program Files\nodejs\node_modules\npm\lib\npm.js:207:9)
+npm verbose stack     at async module.exports (C:\Program Files\nodejs\node_modules\npm\lib\cli\entry.js:74:5)
+npm error code ERESOLVE
+npm error ERESOLVE could not resolve
+npm error
+npm error While resolving: @typescript-eslint/eslint-plugin@7.18.0
+npm error Found: eslint@9.33.0
+npm error node_modules/eslint
+npm error   peer eslint@"^6.0.0 || ^7.0.0 || >=8.0.0" from @eslint-community/eslint-utils@4.7.0
+npm error   node_modules/@eslint-community/eslint-utils
+npm error     @eslint-community/eslint-utils@"^4.4.0" from @typescript-eslint/utils@7.18.0
+npm error     node_modules/@typescript-eslint/utils
+npm error       @typescript-eslint/utils@"7.18.0" from @typescript-eslint/eslint-plugin@7.18.0
+npm error       node_modules/@typescript-eslint/eslint-plugin
+npm error         dev @typescript-eslint/eslint-plugin@"^7.18.0" from the root project
+npm error       1 more (@typescript-eslint/type-utils)
+npm error     @eslint-community/eslint-utils@"^4.2.0" from eslint@9.33.0
+npm error   peer eslint@">=7.0.0" from eslint-config-prettier@9.1.2
+npm error   node_modules/eslint-config-prettier
+npm error     dev eslint-config-prettier@"^9.1.0" from the root project
+npm error   4 more (eslint-plugin-import, eslint-plugin-jsx-a11y, ...)
+npm error
+npm error Could not resolve dependency:
+npm error peer eslint@"^8.56.0" from @typescript-eslint/eslint-plugin@7.18.0
+npm error node_modules/@typescript-eslint/eslint-plugin
+npm error   dev @typescript-eslint/eslint-plugin@"^7.18.0" from the root project
+npm error
+npm error Conflicting peer dependency: eslint@8.57.1
+npm error node_modules/eslint
+npm error   peer eslint@"^8.56.0" from @typescript-eslint/eslint-plugin@7.18.0
+npm error   node_modules/@typescript-eslint/eslint-plugin
+npm error     dev @typescript-eslint/eslint-plugin@"^7.18.0" from the root project
+npm error
+npm error Fix the upstream dependency conflict, or retry
+npm error this command with --force or --legacy-peer-deps
+npm error to accept an incorrect (and potentially broken) dependency resolution.
+npm error
+npm error
+npm error For a full report see:
+npm error C:\Users\Harshit\AppData\Local\npm-cache\_logs\2025-08-10T10_13_21_313Z-eresolve-report.txt
+npm verbose cwd C:\Users\Harshit\WEBSITE\My-Website
+npm verbose os Windows_NT 10.0.19045
+npm verbose node v22.16.0
+npm verbose npm  v10.9.2
+npm verbose exit 1
+npm verbose code 1
+npm error A complete log of this run can be found in: C:\Users\Harshit\AppData\Local\npm-cache\_logs\2025-08-10T10_13_21_313Z-debug-0.log

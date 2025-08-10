@@ -1,29 +1,85 @@
 import React from 'react';
+import { Helmet } from 'react-helmet-async';
+import { useTranslation, Trans } from 'react-i18next';
 
-const About: React.FC = () => (
-  <section className="relative min-h-[60vh] flex flex-col items-center justify-center py-12 bg-gradient-to-br from-purple-50 via-white to-blue-50 overflow-hidden">
-    {/* Decorative SVG */}
-    <svg className="absolute top-0 left-0 w-full h-40 opacity-20 pointer-events-none" viewBox="0 0 1440 320">
-      <path fill="#a78bfa" fillOpacity="1" d="M0,160L80,170.7C160,181,320,203,480,197.3C640,192,800,160,960,154.7C1120,149,1280,171,1360,181.3L1440,192L1440,0L1360,0C1280,0,1120,0,960,0C800,0,640,0,480,0C320,0,160,0,80,0L0,0Z"></path>
-    </svg>
-    <div className="relative z-10 max-w-2xl mx-auto text-center">
-      <h1 className="text-3xl font-bold mb-4 text-blue-700">About Me</h1>
-      <p className="mb-4 text-gray-700">
-        Hi, I’m Harshit Gupta. I blend my passion for technology and pharmacy to create solutions that heal and empower. My journey began with the abacus, sparking a lifelong love for logic and numbers.
-      </p>
-      <ul className="mb-4 list-disc list-inside text-gray-700 text-left inline-block">
-        <li>Empathy</li>
-        <li>Resilience</li>
-        <li>Creativity</li>
-      </ul>
-      <div className="border-l-4 border-blue-500 pl-4 text-gray-600 text-left inline-block mb-4">
-        <p>2014: Started with abacus</p>
-        <p>2018: Entered pharmacy</p>
-        <p>2023: Transitioned to tech</p>
-        <p>2025: Pursuing opportunities in Japan</p>
-      </div>
+const About: React.FC = () => {
+  const { t } = useTranslation();
+  const qualities = t('about.qualities.items', { returnObjects: true }) as string[];
+  return (
+  <section className="cyber-grid min-h-screen py-20 text-gray-100 overflow-hidden">
+    <Helmet>
+      <title>{t('about.meta.title')}</title>
+      <meta name="description" content={t('about.meta.description')} />
+    </Helmet>
+    <div className="relative z-10 max-w-5xl mx-auto px-6">
+      <header className="text-center mb-16">
+        <h1 className="text-5xl font-bold mb-6 bg-gradient-to-r from-purple-400 via-cyan-400 to-green-400 bg-clip-text text-transparent">
+          {t('about.title')}
+        </h1>
+        <div className="glass p-8 rounded-2xl">
+          <p className="text-gray-300 text-lg leading-relaxed">
+            {t('about.intro')}
+          </p>
+        </div>
+      </header>
+      <article className="space-y-8">
+        <div className="glass p-8 rounded-2xl hover:scale-105 transition-all duration-300 neon-border">
+          <p className="text-gray-300 leading-relaxed"><Trans i18nKey="about.education" components={{ strong: <strong className="text-cyan-400" /> }} /></p>
+        </div>
+        <div className="glass p-8 rounded-2xl hover:scale-105 transition-all duration-300 neon-border">
+          <p className="text-gray-300 leading-relaxed"><Trans i18nKey="about.simulations" components={{ strong: <strong className="text-cyan-400" /> }} /></p>
+        </div>
+        <div className="glass p-8 rounded-2xl hover:scale-105 transition-all duration-300 neon-border">
+          <p className="text-gray-300 leading-relaxed"><Trans i18nKey="about.genAI" components={{ strong: <strong className="text-cyan-400" /> }} /></p>
+        </div>
+        <div className="glass p-8 rounded-2xl hover:scale-105 transition-all duration-300 neon-border">
+          <h2 className="text-2xl font-bold mb-4 bg-gradient-to-r from-purple-400 to-cyan-400 bg-clip-text text-transparent">{t('about.techStack.title')}</h2>
+          <div className="grid md:grid-cols-2 gap-4">
+            <div>
+              <h3 className="text-cyan-400 font-semibold mb-2">{t('about.techStack.languages')}</h3>
+              <p className="text-gray-300">{t('about.techStack.languagesList')}</p>
+            </div>
+            <div>
+              <h3 className="text-cyan-400 font-semibold mb-2">{t('about.techStack.frameworks')}</h3>
+              <p className="text-gray-300">{t('about.techStack.frameworksList')}</p>
+            </div>
+            <div>
+              <h3 className="text-cyan-400 font-semibold mb-2">{t('about.techStack.domains')}</h3>
+              <p className="text-gray-300">{t('about.techStack.domainsList')}</p>
+            </div>
+            <div>
+              <h3 className="text-cyan-400 font-semibold mb-2">{t('about.techStack.tools')}</h3>
+              <p className="text-gray-300">{t('about.techStack.toolsList')}</p>
+            </div>
+          </div>
+        </div>
+        <div className="glass p-8 rounded-2xl hover:scale-105 transition-all duration-300 neon-border">
+          <h2 className="text-2xl font-bold mb-4 bg-gradient-to-r from-purple-400 to-cyan-400 bg-clip-text text-transparent">{t('about.interdisciplinary.title')}</h2>
+          <p className="text-gray-300 leading-relaxed"><Trans i18nKey="about.interdisciplinary.text" components={{ strong: <strong className="text-cyan-400" /> }} /></p>
+        </div>
+        <div className="glass p-8 rounded-2xl hover:scale-105 transition-all duration-300 neon-border">
+          <h2 className="text-2xl font-bold mb-4 bg-gradient-to-r from-purple-400 to-cyan-400 bg-clip-text text-transparent">{t('about.cultural.title')}</h2>
+          <p className="text-gray-300 leading-relaxed"><Trans i18nKey="about.cultural.text" components={{ strong: <strong className="text-cyan-400" /> }} /></p>
+        </div>
+        <div className="glass p-8 rounded-2xl hover:scale-105 transition-all duration-300 neon-border">
+          <h2 className="text-2xl font-bold mb-4 bg-gradient-to-r from-purple-400 to-cyan-400 bg-clip-text text-transparent">{t('about.qualities.title')}</h2>
+          <div className="grid md:grid-cols-2 gap-4">
+            {qualities.map(q => (
+              <div key={q} className="flex items-center space-x-3">
+                <div className="w-2 h-2 bg-cyan-400 rounded-full neon-glow"></div>
+                <span className="text-gray-300">{q}</span>
+              </div>
+            ))}
+          </div>
+        </div>
+        <div className="glass p-8 rounded-2xl hover:scale-105 transition-all duration-300 neon-border text-center">
+          <h2 className="text-2xl font-bold mb-4 bg-gradient-to-r from-purple-400 to-cyan-400 bg-clip-text text-transparent">{t('about.mission.title')}</h2>
+          <p className="text-gray-300 leading-relaxed">{t('about.mission.text')}</p>
+        </div>
+      </article>
     </div>
   </section>
-);
+  );
+};
 
 export default About;
