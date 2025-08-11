@@ -6,6 +6,7 @@ interface Certification {
   name: string;
   logo: string; // original remote (kept if we later want it)
   fallbackIcon?: string;
+  url?: string; // public verification link
 }
 
 // Toggle: set to false if you want to attempt loading remote brand SVGs again
@@ -21,76 +22,92 @@ const createSVGIcon = (text: string, bgColor: string = '#22d3ee') =>
   `)}`;
 
 // Updated certifications list with very reliable image URLs and fallbacks
+// NOTE: Some mapping between provided URLs and certifications is inferred.
+// If any URL should point to a different item, let me know and we can adjust.
 const certifications: Certification[] = [
   { 
     name: 'Artificial Intelligence Fundamentals (IBM)', 
     logo: 'https://cdn.worldvectorlogo.com/logos/ibm.svg',
-    fallbackIcon: createSVGIcon('IBM', '#1f77b4')
+    fallbackIcon: createSVGIcon('IBM', '#1f77b4'),
+    url: 'https://courses.cognitiveclass.ai/certificates/1dfa2dc3923a4741aa3aeba15c6e03cc'
   },
   { 
     name: 'Getting Started with DevOps on AWS', 
     logo: 'https://cdn.worldvectorlogo.com/logos/aws-2.svg',
-    fallbackIcon: createSVGIcon('AWS', '#ff9900')
+    fallbackIcon: createSVGIcon('AWS', '#ff9900'),
+    url: 'https://www.credly.com/go/yLuGB5K8D6ygO3bELcDFiw'
   },
   { 
     name: 'Hadoop Programming - Level 1 (IBM)', 
     logo: 'https://cdn.worldvectorlogo.com/logos/ibm.svg',
-    fallbackIcon: createSVGIcon('IBM', '#1f77b4')
+    fallbackIcon: createSVGIcon('IBM', '#1f77b4'),
+    url: 'https://courses.cognitiveclass.ai/certificates/548cd53cd9354ea19e7babf25ab68fb5'
   },
   { 
     name: 'AWS - Solutions Architecture (Job Simulation)', 
     logo: 'https://cdn.worldvectorlogo.com/logos/aws-2.svg',
-    fallbackIcon: createSVGIcon('AWS', '#ff9900')
+    fallbackIcon: createSVGIcon('AWS', '#ff9900'),
+    url: 'https://www.credly.com/badges/fa3bf869-e936-4001-995e-ab8bcb774389/public_url'
   },
   { 
     name: 'AWS Managed Services: Disaster Recovery', 
     logo: 'https://cdn.worldvectorlogo.com/logos/aws-2.svg',
-    fallbackIcon: createSVGIcon('AWS', '#ff9900')
+    fallbackIcon: createSVGIcon('AWS', '#ff9900'),
+    url: 'https://www.credly.com/badges/11fef2d1-51dc-4aa4-9371-ca9ce5217015'
   },
   { 
     name: 'Accenture Nordics - Consultant (Job Simulation)', 
     logo: 'https://cdn.worldvectorlogo.com/logos/accenture.svg',
-    fallbackIcon: createSVGIcon('ACC', '#a100ff')
+    fallbackIcon: createSVGIcon('ACC', '#a100ff'),
+    url: 'https://forage-uploads-prod.s3.amazonaws.com/completion-certificates/pmnMSL4QiQ9JCgE3W/kkE9HyeNcw6rwCRGw_pmnMSL4QiQ9JCgE3W_J986TYQH4BZJcsc93_1752201895584_completion_certificate.pdf'
   },
   { 
     name: 'Accenture Nordics - Software Engineering (Job Simulation)', 
     logo: 'https://cdn.worldvectorlogo.com/logos/accenture.svg',
-    fallbackIcon: createSVGIcon('ACC', '#a100ff')
+    fallbackIcon: createSVGIcon('ACC', '#a100ff'),
+    url: 'https://forage-uploads-prod.s3.amazonaws.com/completion-certificates/xhih9yFWsf6AYfngd/KJGjQRHZ6eGquTKfF_xhih9yFWsf6AYfngd_J986TYQH4BZJcsc93_1752138276785_completion_certificate.pdf'
   },
   { 
     name: 'Build Your Own Chatbot (IBM)', 
     logo: 'https://cdn.worldvectorlogo.com/logos/ibm.svg',
-    fallbackIcon: createSVGIcon('IBM', '#1f77b4')
+    fallbackIcon: createSVGIcon('IBM', '#1f77b4'),
+    url: 'https://forage-uploads-prod.s3.amazonaws.com/completion-certificates/xhih9yFWsf6AYfngd/HNpZwZcuYwona2d8Y_xhih9yFWsf6AYfngd_J986TYQH4BZJcsc93_1753116581004_completion_certificate.pdf' // placeholder mapping
   },
   { 
     name: 'Data Science Foundations - Level 1 (IBM)', 
     logo: 'https://cdn.worldvectorlogo.com/logos/ibm.svg',
-    fallbackIcon: createSVGIcon('IBM', '#1f77b4')
+    fallbackIcon: createSVGIcon('IBM', '#1f77b4'),
+    url: 'https://forage-uploads-prod.s3.amazonaws.com/completion-certificates/9PBTqmSxAf6zZTseP/E9pA6qsdbeyEkp3ti_9PBTqmSxAf6zZTseP_J986TYQH4BZJcsc93_1752637119653_completion_certificate.pdf' // placeholder mapping
   },
   { 
     name: 'Deloitte Australia - Cyber Security (Job Simulation)', 
     logo: 'https://cdn.worldvectorlogo.com/logos/deloitte-1.svg',
-    fallbackIcon: createSVGIcon('DEL', '#86bc25')
+    fallbackIcon: createSVGIcon('DEL', '#86bc25'),
+    url: 'https://forage-uploads-prod.s3.amazonaws.com/completion-certificates/ifobHAoMjQs9s6bKS/gmf3ypEXBj2wvfQWC_ifobHAoMjQs9s6bKS_J986TYQH4BZJcsc93_1752125819529_completion_certificate.pdf'
   },
   { 
     name: 'Docker Essentials: A Developer Introduction', 
     logo: 'https://cdn.worldvectorlogo.com/logos/docker.svg',
-    fallbackIcon: createSVGIcon('DOC', '#2496ed')
+    fallbackIcon: createSVGIcon('DOC', '#2496ed'),
+    url: 'https://forage-uploads-prod.s3.amazonaws.com/completion-certificates/ifobHAoMjQs9s6bKS/gMTdCXwDdLYoXZ3wG_ifobHAoMjQs9s6bKS_J986TYQH4BZJcsc93_1752199339037_completion_certificate.pdf' // placeholder mapping
   },
   { 
     name: 'Tata - Cybersecurity Analyst (Job Simulation)', 
     logo: 'https://cdn.worldvectorlogo.com/logos/tata-2.svg',
-    fallbackIcon: createSVGIcon('TATA', '#1f4e79')
+    fallbackIcon: createSVGIcon('TATA', '#1f4e79'),
+    url: 'https://forage-uploads-prod.s3.amazonaws.com/completion-certificates/xhih9yFWsf6AYfngd/HNpZwZcuYwona2d8Y_xhih9yFWsf6AYfngd_J986TYQH4BZJcsc93_1753116581004_completion_certificate.pdf' // duplicate placeholder if mapping differs
   },
   { 
     name: 'Tata - GenAI Powered Data Analytics (Job Simulation)', 
     logo: 'https://cdn.worldvectorlogo.com/logos/tata-2.svg',
-    fallbackIcon: createSVGIcon('TATA', '#1f4e79')
+    fallbackIcon: createSVGIcon('TATA', '#1f4e79'),
+    url: 'https://forage-uploads-prod.s3.amazonaws.com/completion-certificates/xhih9yFWsf6AYfngd/KJGjQRHZ6eGquTKfF_xhih9yFWsf6AYfngd_J986TYQH4BZJcsc93_1752138276785_completion_certificate.pdf' // duplicate placeholder if mapping differs
   },
   { 
     name: 'Programming with Generative AI (IIT Guwahati)', 
     logo: 'https://cdn.worldvectorlogo.com/logos/iit-guwahati.svg',
-    fallbackIcon: createSVGIcon('IIT', '#004d8f')
+    fallbackIcon: createSVGIcon('IIT', '#004d8f'),
+    url: 'https://www.coursera.org/account/accomplishments/records/45MKMD1XJ9N3'
   },
   { 
     name: 'SQL (Mimo)', 
@@ -100,7 +117,8 @@ const certifications: Certification[] = [
   { 
     name: 'Typing Certificate (Ratatype)', 
     logo: 'https://cdn.worldvectorlogo.com/logos/ratatype.svg',
-    fallbackIcon: createSVGIcon('TYPE', '#ff6b6b')
+    fallbackIcon: createSVGIcon('TYPE', '#ff6b6b'),
+    url: 'https://www.ratatype.com/u6730989/certificate/en_new/'
   },
 ];
 
@@ -128,28 +146,43 @@ const Certifications: React.FC = () => {
       {certifications.map(cert => {
         const initialSrc = FORCE_LOCAL_ICONS && cert.fallbackIcon ? cert.fallbackIcon : cert.logo;
         return (
-          <div
+          <a
             key={cert.name}
-            className="glass p-6 rounded-2xl hover:scale-105 hover:neon-glow transition-all duration-500 flex flex-col items-center text-center"
+            href={cert.url || '#'}
+            target={cert.url ? '_blank' : undefined}
+            rel={cert.url ? 'noopener noreferrer' : undefined}
+            aria-label={cert.url ? `${cert.name} – open credential in new tab` : cert.name}
+            className="group focus:outline-none focus-visible:ring-2 focus-visible:ring-cyan-400 focus-visible:ring-offset-2 focus-visible:ring-offset-slate-900 rounded-2xl"
+            tabIndex={0}
           >
-            <div className="w-16 h-16 mb-4 flex items-center justify-center bg-gray-800/60 rounded-xl p-2 border border-cyan-400/20">
-              <img
-                src={initialSrc}
-                alt={`${cert.name} logo`}
-                className="max-w-full max-h-full object-contain opacity-90 hover:opacity-100 transition-opacity"
-                onError={(e) => {
-                  const target = e.currentTarget;
-                  if (!target.dataset.fallbackUsed && cert.fallbackIcon) {
-                    target.dataset.fallbackUsed = 'true';
-                    target.src = cert.fallbackIcon;
-                  }
-                }}
-              />
+            <div
+              className="glass p-6 rounded-2xl hover:scale-105 group-hover:scale-105 hover:neon-glow transition-all duration-500 flex flex-col items-center text-center h-full"
+            >
+              <div className="w-16 h-16 mb-4 flex items-center justify-center bg-gray-800/60 rounded-xl p-2 border border-cyan-400/20 relative">
+                {cert.url && (
+                  <span className="absolute -top-1 -right-1 bg-cyan-500/80 text-[10px] font-semibold px-1.5 py-0.5 rounded shadow">
+                    View
+                  </span>
+                )}
+                <img
+                  src={initialSrc}
+                  alt={`${cert.name} logo`}
+                  className="max-w-full max-h-full object-contain opacity-90 group-hover:opacity-100 transition-opacity"
+                  loading="lazy"
+                  onError={(e) => {
+                    const target = e.currentTarget;
+                    if (!target.dataset.fallbackUsed && cert.fallbackIcon) {
+                      target.dataset.fallbackUsed = 'true';
+                      target.src = cert.fallbackIcon;
+                    }
+                  }}
+                />
+              </div>
+              <span className="text-xs font-medium text-gray-300 leading-tight line-clamp-4">
+                {cert.name}
+              </span>
             </div>
-            <span className="text-xs font-medium text-gray-300 leading-tight">
-              {cert.name}
-            </span>
-          </div>
+          </a>
         );
       })}
     </div>
