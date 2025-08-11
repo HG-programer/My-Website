@@ -1,3 +1,3 @@
 User-agent: *
 Allow: /
-Sitemap: https://harshit-portfolio.pages.dev/sitemap.xml
+Sitemap: https://hg-programer.github.io/My-Website/sitemap.xml
