@@ -47,6 +47,7 @@ Built with ❤️ using React, Vite, and Tailwind CSS.
    - Build output directory: `dist`
 4. Ensure SPA routing: `_redirects` file already added (`/* /index.html 200`).
 5. Set custom domain (optional) and deploy.
+6. SEO: `robots.txt` & `sitemap.xml` included automatically.
 
 ### Netlify
 1. New Site from Git -> select repo.
