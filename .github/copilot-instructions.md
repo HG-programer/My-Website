@@ -1,0 +1,3 @@
+<!-- Use this file to provide workspace-specific custom instructions to Copilot. For more details, visit https://code.visualstudio.com/docs/copilot/copilot-customization#_use-a-githubcopilotinstructionsmd-file -->
+
+This is a React + Vite + Tailwind CSS portfolio project. Use only modern React (with hooks and functional components), TypeScript, and Tailwind CSS for all styling. Include a modern responsive Navbar, Footer, and main sections: Home, About, Certifications, Projects, Japan Vision, and Contact. Use best practices for accessibility and responsiveness. Add a beautiful hero section, animated transitions, and a clean, professional layout. Include a PageSection component for reusable section layouts.
