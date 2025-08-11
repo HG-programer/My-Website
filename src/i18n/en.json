@@ -1,0 +1,169 @@
+{
+  "hero": {
+    "title": "HARSHIT GUPTA",
+    "tagline1": "Full Stack & AI Developer",
+    "tagline2": "Generative AI Specialist",
+    "tagline3": "Japan Tech Visionary",
+    "intro": "Building tomorrow's solutions today with cutting-edge AI, cloud infrastructure, and immersive user experiences. Ready to revolutionize Japan's digital landscape.",
+    "viewProjects": "View Projects",
+    "aboutMe": "About Me"
+  },
+  "nav": {
+    "home": "Home",
+    "about": "About",
+    "certifications": "Certifications",
+    "projects": "Projects",
+    "japan": "Japan Vision",
+    "contact": "Contact"
+  },
+  "home": {
+    "impactMetrics": {
+      "title": "Impact Metrics",
+      "certifications": {"label": "Certifications", "desc": "LinkedIn & Industry"},
+      "projects": {"label": "Projects", "desc": "AI & Full Stack"},
+      "aiFocus": {"label": "AI Focus", "value": "GenAI", "desc": "LLMs & Prompt Systems"},
+      "jpLearning": {"label": "JP Learning", "value": "290+ 🔥", "desc": "Day Streak"}
+    },
+    "coreTechStack": {"title": "Core Tech Stack"},
+    "currentlyBuilding": {
+      "title": "Currently Building",
+      "items": [
+        "Haru-GPT: Japanese-aligned conversational AI assistant",
+        "InsightLens: Real‑time analytics dashboard with AI summaries",
+        "TaskNova: Productivity engine with contextual AI suggestions"
+      ]
+    },
+    "learningGrowth": {
+      "title": "Learning & Growth",
+      "items": [
+        "Advancing Meta Full Stack Developer pathway",
+        "Deepening Generative AI orchestration & prompt engineering",
+        "Refining AWS architecture & resilience patterns",
+        "Improving Japanese linguistic fluency & tech vocabulary"
+      ]
+    },
+    "cta": {
+      "text": "Open to collaboration on impactful AI & full stack initiatives—especially Japan-focused innovation.",
+      "collaborate": "Collaborate",
+      "certifications": "Certifications"
+    }
+  },
+  "about": {
+    "meta": {"title": "About | Harshit Gupta", "description": "Full Stack & AI technologist blending academic rigor, simulations, empathy, and Japanese focus."},
+    "title": "About Me",
+    "intro": "A highly motivated and versatile technologist with a rare blend of academic rigor, hands-on experience, and heartfelt passion—actively building a future career for Japan's evolving tech ecosystem.",
+    "education": "Currently pursuing a <strong>Bachelor of Technology (2023–2027)</strong> while complementing formal education with certifications like <strong>Google IT Support</strong> and <strong>Amazon Junior Developer</strong>. An analytical base—evidenced by <strong>All India Rank #81 in the National Science Olympiad</strong>—anchors my growth.",
+    "simulations": "Practical capability reinforced via immersive job simulations: <strong>AWS Solutions Architecture</strong>, <strong>AWS Managed Services</strong>, <strong>Tata GenAI Data Analytics</strong>, <strong>Tata Cybersecurity Analyst</strong>, <strong>Accenture Nordics Consultant & Software Engineering</strong>.",
+    "genAI": "Certified in <strong>Programming with Generative AI (IIT Guwahati)</strong>, progressing through the <strong>Meta Full Stack Developer Certification</strong> toward a <strong>Full Stack AI Developer</strong> trajectory.",
+    "techStack": {
+      "title": "Technical Stack",
+      "languages": "Languages:",
+      "frameworks": "Frameworks:",
+      "domains": "Domains:",
+      "tools": "Tools:",
+      "languagesList": "Python, Java, JavaScript/TypeScript, SQL",
+      "frameworksList": "React, Django, Spring Boot",
+      "domainsList": "Generative AI, Cloud (AWS), Web, IT Support",
+      "toolsList": "Git, CI/CD fundamentals, Container basics (Docker)"
+    },
+    "interdisciplinary": {
+      "title": "Interdisciplinary Edge",
+      "text": "A prior foundation in <strong>pharmacy (2021–2023)</strong> with clinical exposure to 7000+ patients built empathy, active listening, and applied problem‑solving—now fueling user-centric engineering and ethical AI."
+    },
+    "cultural": {
+      "title": "Global & Cultural Alignment",
+      "text": "Long-term objective: integrate into Japan's innovation economy. Actively learning Japanese (290+ day streak) while aligning skills with national priorities in <strong>Generative AI</strong>, <strong>Full Stack</strong>, <strong>Cloud Infrastructure</strong>, and <strong>IT Support</strong>."
+    },
+    "qualities": {
+      "title": "Core Qualities",
+      "items": [
+        "Analytical depth & structured thinking",
+        "Empathy from clinical exposure",
+        "Adaptability across domains",
+        "Growth mindset & cultural openness"
+      ]
+    },
+    "mission": {"title": "Mission", "text": "Driven to join forward‑thinking teams that bridge cultures, enable digital transformation, and build solutions with real human impact."}
+  },
+  "contact": {
+    "meta": {"title": "Contact | Harshit Gupta", "description": "Contact Harshit Gupta for collaborations or opportunities."},
+    "title": "Get In Touch",
+    "intro": "Ready to collaborate on cutting-edge projects? Let's build the future together with <strong>AI innovation</strong>, <strong>full-stack development</strong>, and <strong>cloud solutions</strong>.",
+    "email": {"title": "Email", "value": "harshitg933@gmail.com"},
+    "github": {"title": "GitHub", "value": "@HG-programer"},
+    "linkedin": {"title": "LinkedIn", "value": "Professional Network"},
+    "build": {"title": "🚀 Let's Build Something Amazing"},
+    "areas": {
+      "ai": {"title": "🤖 AI & Machine Learning", "desc": "Generative AI, LLMs, Data Analytics"},
+      "fullstack": {"title": "💻 Full Stack Development", "desc": "React, Django, Spring Boot, TypeScript"},
+      "cloud": {"title": "☁️ Cloud Solutions", "desc": "AWS, Docker, CI/CD, Scalable Systems"},
+      "japan": {"title": "🇯🇵 Japan-Focused", "desc": "Cultural alignment, Japanese language"}
+    },
+    "quote": "\"Building bridges between cultures through technology\""
+  },
+  "japan": {
+    "meta": {"title": "Japan Vision | Harshit Gupta", "description": "Vision and inspiration from Japan's culture and technology."},
+    "title": "My Japan Vision",
+    "sections": {
+      "cultural": {"title": "🏯 Cultural Inspiration", "text": "Japan inspires me with its harmony of <strong>timeless tradition</strong> and <strong>cutting-edge innovation</strong>. Language learning deepens respect for craft and resilience—principles I apply in engineering."},
+      "professional": {"title": "💼 Professional Values", "text": "I align with Japan's emphasis on <strong>precision</strong>, <strong>quality</strong>, and <strong>responsibility</strong>. These guide scalable, secure, user‑centric systems."},
+      "career": {"title": "🎯 Career Vision", "text": "From the abacus to intelligent platforms—aiming to contribute to <strong>Japan's evolving tech ecosystem</strong> via <strong>AI</strong>, <strong>full stack development</strong>, and <strong>cloud architecture</strong>."},
+      "language": {"title": "📚 Language Journey", "streak": "290+ Day Streak", "text": "Consistent daily immersion strengthens communication, cultural literacy, and collaboration readiness."},
+      "future": {"title": "🚀 Future Focus Areas", "cards": [
+        {"icon": "🤖", "title": "AI Innovation", "desc": "LLMs & Generative AI"},
+        {"icon": "💻", "title": "Full Stack", "desc": "Responsive Apps & APIs"},
+        {"icon": "☁️", "title": "Cloud Native", "desc": "AWS & Scalability"},
+        {"icon": "🛡️", "title": "Secure Systems", "desc": "Resilience & Trust"}
+      ]}
+    },
+    "quote": "\"Bridging culture and code to empower meaningful innovation.\""
+  },
+  "projects": {
+    "meta": {"title": "Projects | Harshit Gupta", "description": "Cutting-edge AI and Full Stack projects."},
+    "title": "PROJECTS",
+    "subtitle": "Cutting-edge solutions at the intersection of AI, cloud, and user experience",
+    "status": {"live": "Live", "inProgress": "In Progress", "complete": "Complete"},
+    "techStack": "Tech Stack",
+    "buttons": {"demo": "Live Demo", "github": "GitHub"},
+    "items": {
+      "haru": {"title": "Haru-GPT", "desc": "Full-stack multi-adapter AI chatbot playground supporting local & cloud LLMs (Ollama, Groq, Gemini, HuggingFace).", "period": "May 2025 - Present", "status": "live"},
+      "insight": {"title": "InsightLens 🔍 - AI Image Captioning Tool", "desc": "Generates intelligent captions for uploaded images using Vision Transformer + GPT-2 (Flask backend).", "period": "May 2025 - Present", "status": "complete"},
+      "tasknova": {"title": "TaskNova AI App", "desc": "Productivity assistant with NLP-driven task planning and contextual AI suggestions.", "period": "Mar 2025 - Present", "status": "inProgress"}
+    }
+  },
+  "certifications": {
+    "meta": {"title": "Certifications | Harshit Gupta", "description": "Professional certifications across AI, Cloud, and Development."},
+    "title": "CERTIFICATIONS",
+    "subtitle": "Industry-recognized credentials showcasing expertise across AI, Cloud, and Development"
+  },
+  "notFound": {
+    "title": "404",
+    "text": "The page you are looking for was not found.",
+    "goHome": "Go Home"
+  },
+  "chatbot": {
+    "ui": {
+      "title": "AI Chatbot",
+      "welcome": "Hi! I'm your conversational demo assistant. Ask about my projects, skills, or how to contact me.",
+      "openButton": "Open chatbot",
+      "close": "Close chatbot",
+      "thinking": "Thinking...",
+      "placeholder": "Type a message...",
+      "send": "Send",
+      "languageChanged": "Language context updated. Continue chatting!"
+    },
+    "intents": {
+      "greet": "Hello! How can I help? You can ask about projects, skills, or contact details.",
+      "projects": "I build AI + full stack projects like Haru-GPT, InsightLens, and TaskNova. Open the Projects page for details.",
+      "skills": "Core stack: React, TypeScript, Python, Java, Generative AI, AWS fundamentals, and cloud-ready architectures.",
+      "contact": "Reach me via email: harshitg933@gmail.com or LinkedIn (see Contact page).",
+      "fallback": "I’m not sure yet—try asking about projects, skills, or contact."
+    },
+    "suggestions": {
+      "greet": "Say Hi",
+      "projects": "Ask Projects",
+      "skills": "Ask Skills",
+      "contact": "Contact Info"
+    }
+  }
+}

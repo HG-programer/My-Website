@@ -1,0 +1,169 @@
+{
+  "hero": {
+    "title": "ハルシット・グプタ",
+    "tagline1": "フルスタック＆AI開発者",
+    "tagline2": "生成AIスペシャリスト",
+    "tagline3": "日本テック志向",
+    "intro": "最先端のAI・クラウド・UXで明日のソリューションを創造。日本のデジタル変革に貢献します。",
+    "viewProjects": "プロジェクトを見る",
+    "aboutMe": "プロフィール"
+  },
+  "nav": {
+    "home": "ホーム",
+    "about": "概要",
+    "certifications": "認定資格",
+    "projects": "プロジェクト",
+    "japan": "日本ビジョン",
+    "contact": "連絡"
+  },
+  "home": {
+    "impactMetrics": {
+      "title": "インパクト指標",
+      "certifications": {"label": "認定資格", "desc": "LinkedIn ＆ 業界"},
+      "projects": {"label": "プロジェクト", "desc": "AI ＆ フルスタック"},
+      "aiFocus": {"label": "AI領域", "value": "生成AI", "desc": "LLM＆プロンプト"},
+      "jpLearning": {"label": "日本語学習", "value": "290+ 🔥", "desc": "継続日数"}
+    },
+    "coreTechStack": {"title": "主要技術スタック"},
+    "currentlyBuilding": {
+      "title": "開発中",
+      "items": [
+        "Haru-GPT：日本語対応 会話型AIアシスタント",
+        "InsightLens：リアルタイム分析＋AI要約ダッシュボード",
+        "TaskNova：AI提案付き生産性エンジン"
+      ]
+    },
+    "learningGrowth": {
+      "title": "学習と成長",
+      "items": [
+        "Meta フルスタック開発者認定 進行中",
+        "生成AIオーケストレーション＆プロンプト最適化",
+        "AWSアーキテクチャとレジリエンス強化",
+        "日本語運用力と技術語彙向上"
+      ]
+    },
+    "cta": {
+      "text": "日本向けイノベーションを中心に、AI＆フルスタック分野での共同開発を歓迎します。",
+      "collaborate": "協業する",
+      "certifications": "資格一覧"
+    }
+  },
+  "about": {
+    "meta": {"title": "概要 | ハルシット・グプタ", "description": "学術・シミュレーション・共感性・日本志向を融合したフルスタック＆AI技術者。"},
+    "title": "プロフィール",
+    "intro": "日本の進化するテックエコシステムに貢献することを目指し、学術的基盤と実践経験を兼ね備えた意欲的な技術者。",
+    "education": "<strong>工学学士(2023–2027)</strong> 在籍。<strong>Google IT Support</strong> や <strong>Amazon Junior Developer</strong> などの認定で補完。<strong>全国科学オリンピック81位</strong> が分析力の土台。",
+    "simulations": "実践力は <strong>AWSソリューションアーキテクト</strong>、<strong>AWSディザスタリカバリ</strong>、<strong>Tata GenAIデータ分析</strong>、<strong>Tataサイバーセキュリティ</strong>、<strong>Accenture北欧コンサル＆SE</strong> などのシミュレーションで強化。",
+    "genAI": "<strong>生成AIプログラミング(IITグワーハーティ)</strong> 認定取得。<strong>Meta フルスタック開発者</strong> 認定を進行中で <strong>フルスタックAI開発者</strong> を志向。",
+    "techStack": {
+      "title": "技術スタック",
+      "languages": "言語:",
+      "frameworks": "フレームワーク:",
+      "domains": "領域:",
+      "tools": "ツール:",
+      "languagesList": "Python, Java, JavaScript/TypeScript, SQL",
+      "frameworksList": "React, Django, Spring Boot",
+      "domainsList": "生成AI, クラウド(AWS), Web, ITサポート",
+      "toolsList": "Git, CI/CD基礎, Docker(コンテナ基礎)"
+    },
+    "interdisciplinary": {
+      "title": "学際的強み",
+      "text": "<strong>薬学(2021–2023)</strong> の基盤と 7000+ 患者との臨床接点で培った共感・傾聴・課題解決力をユーザー中心開発と倫理的AIへ活用。"
+    },
+    "cultural": {
+      "title": "グローバル＆文化適合",
+      "text": "長期目標：日本のイノベーション経済へ参画。日本語(290+日連続)学習とともに <strong>生成AI</strong>・<strong>フルスタック</strong>・<strong>クラウド</strong>・<strong>ITサポート</strong> に整合。"
+    },
+    "qualities": {
+      "title": "コア特性",
+      "items": [
+        "分析的思考と構造化",
+        "臨床経験に基づく共感力",
+        "領域横断の適応性",
+        "成長マインドと文化的開放性"
+      ]
+    },
+    "mission": {"title": "ミッション", "text": "文化をつなぎ、デジタル変革を促し、実効的なソリューションを創出するチームへ貢献したい。"}
+  },
+  "contact": {
+    "meta": {"title": "連絡 | ハルシット・グプタ", "description": "協業・機会に関するお問い合わせ。"},
+    "title": "お問い合わせ",
+    "intro": "最先端プロジェクトで協業しませんか？ <strong>AI</strong>・<strong>フルスタック</strong>・<strong>クラウド</strong> の力で未来を共創しましょう。",
+    "email": {"title": "メール", "value": "harshitg933@gmail.com"},
+    "github": {"title": "GitHub", "value": "@HG-programer"},
+    "linkedin": {"title": "LinkedIn", "value": "Professional Network"},
+    "build": {"title": "🚀 共に素晴らしいものを"},
+    "areas": {
+      "ai": {"title": "🤖 AI・機械学習", "desc": "生成AI, LLM, データ分析"},
+      "fullstack": {"title": "💻 フルスタック開発", "desc": "React, Django, Spring Boot, TypeScript"},
+      "cloud": {"title": "☁️ クラウドソリューション", "desc": "AWS, Docker, CI/CD, スケール"},
+      "japan": {"title": "🇯🇵 日本志向", "desc": "文化適合・日本語"}
+    },
+    "quote": "\"テクノロジーで文化の架け橋を築く\""
+  },
+  "japan": {
+    "meta": {"title": "日本ビジョン | ハルシット・グプタ", "description": "日本文化と技術へのビジョン。"},
+    "title": "私の日本ビジョン",
+    "sections": {
+      "cultural": {"title": "🏯 文化的インスピレーション", "text": "日本は <strong>伝統</strong> と <strong>最先端技術</strong> の調和で私を刺激します。言語学習は職人精神と粘り強さへの敬意を深め、それを開発品質へ反映。"},
+      "professional": {"title": "💼 職業的価値観", "text": "日本が重視する <strong>精度</strong>・<strong>品質</strong>・<strong>責任</strong> と一致し、スケーラブルで安全かつユーザー中心のシステムを志向。"},
+      "career": {"title": "🎯 キャリアビジョン", "text": "そろばんの象徴的出発点からインテリジェント基盤へ。<strong>AI</strong>・<strong>フルスタック</strong>・<strong>クラウド</strong> で日本のテック進化に貢献。"},
+      "language": {"title": "📚 言語の歩み", "streak": "290+ 日連続", "text": "継続的な日次学習でコミュニケーション力と文化リテラシーを強化。"},
+      "future": {"title": "🚀 今後の重点領域", "cards": [
+        {"icon": "🤖", "title": "AIイノベーション", "desc": "LLM & 生成AI"},
+        {"icon": "💻", "title": "フルスタック", "desc": "レスポンシブアプリ＆API"},
+        {"icon": "☁️", "title": "クラウドネイティブ", "desc": "AWS & スケール"},
+        {"icon": "🛡️", "title": "セキュアシステム", "desc": "レジリエンス＆信頼"}
+      ]}
+    },
+    "quote": "\"文化とコードの融合で意義あるイノベーションを生む\""
+  },
+  "projects": {
+    "meta": {"title": "プロジェクト | ハルシット・グプタ", "description": "先端AIとフルスタックのプロジェクト。"},
+    "title": "PROJECTS",
+    "subtitle": "AI・クラウド・UX の交差点での先端ソリューション",
+    "status": {"live": "運用中", "inProgress": "進行中", "complete": "完了"},
+    "techStack": "技術スタック",
+    "buttons": {"demo": "デモ", "github": "GitHub"},
+    "items": {
+      "haru": {"title": "Haru-GPT", "desc": "ローカル＆クラウドLLM対応のマルチアダプタAIチャット基盤。", "period": "2025年5月 - 現在", "status": "live"},
+      "insight": {"title": "InsightLens 🔍", "desc": "Vision Transformer + GPT-2 による画像キャプション生成。", "period": "2025年5月 - 現在", "status": "complete"},
+      "tasknova": {"title": "TaskNova AI", "desc": "NLP活用のタスク最適化AIアシスタント。", "period": "2025年3月 - 現在", "status": "inProgress"}
+    }
+  },
+  "certifications": {
+    "meta": {"title": "認定資格 | ハルシット・グプタ", "description": "AI・クラウド・開発に関する専門資格。"},
+    "title": "CERTIFICATIONS",
+    "subtitle": "AI・クラウド・開発分野の専門知識を示す資格"
+  },
+  "notFound": {
+    "title": "404",
+    "text": "お探しのページは見つかりませんでした。",
+    "goHome": "ホームへ戻る"
+  },
+  "chatbot": {
+    "ui": {
+      "title": "AIチャットボット",
+      "welcome": "こんにちは！デモ用アシスタントです。プロジェクト・スキル・連絡方法を聞いてください。",
+      "openButton": "チャットを開く",
+      "close": "閉じる",
+      "thinking": "考え中...",
+      "placeholder": "メッセージを入力...",
+      "send": "送信",
+      "languageChanged": "言語が更新されました。続けてください！"
+    },
+    "intents": {
+      "greet": "こんにちは！どんなことを知りたいですか？ プロジェクト・スキル・連絡先など聞けます。",
+      "projects": "Haru-GPT や InsightLens、TaskNova など AI＋フルスタック開発を行っています。詳しくはプロジェクトページへ。",
+      "skills": "主なスキル: React, TypeScript, Python, Java, 生成AI, AWS基礎, クラウド指向アーキテクチャ。",
+      "contact": "メール: harshitg933@gmail.com または LinkedIn (連絡ページ参照)。",
+      "fallback": "まだ理解できませんでした。プロジェクト・スキル・連絡先について聞いてください。"
+    },
+    "suggestions": {
+      "greet": "挨拶する",
+      "projects": "プロジェクトを聞く",
+      "skills": "スキルを聞く",
+      "contact": "連絡方法"
+    }
+  }
+}
