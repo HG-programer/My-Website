@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect, useRef } from 'react';
 import { Helmet } from 'react-helmet-async';
 import { useTranslation } from 'react-i18next';
 
@@ -141,52 +141,72 @@ const Certifications: React.FC = () => {
 
     {/* Certification Cards */}
     <div className="relative z-10 max-w-7xl mx-auto px-6 grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
-      {certifications.map(cert => {
-        const initialSrc = FORCE_LOCAL_ICONS && cert.fallbackIcon ? cert.fallbackIcon : cert.logo;
-        const CardInner = (
-          <div
-            className="glass p-6 rounded-2xl group hover:scale-105 hover:neon-glow transition-all duration-500 flex flex-col items-center text-center h-full focus:outline-none"
-          >
-            <div className="w-16 h-16 mb-4 flex items-center justify-center bg-gray-800/60 rounded-xl p-2 border border-cyan-400/20 relative">
-              {cert.url && (
-                <span className="absolute -top-1 -right-1 bg-cyan-500/80 text-[10px] font-semibold px-1.5 py-0.5 rounded shadow" aria-hidden="true">🔗</span>
-              )}
-              <img
-                src={initialSrc}
-                alt={`${cert.name} logo`}
-                className="max-w-full max-h-full object-contain opacity-90 group-hover:opacity-100 transition-opacity"
-                loading="lazy"
-                onError={(e) => {
-                  const target = e.currentTarget as HTMLImageElement & { dataset: { fallbackUsed?: string } };
-                  if (!target.dataset.fallbackUsed && cert.fallbackIcon) {
-                    target.dataset.fallbackUsed = 'true';
-                    target.src = cert.fallbackIcon;
-                  }
-                }}
-              />
-            </div>
-            <span className="text-xs font-medium text-gray-300 leading-tight line-clamp-4">
-              {cert.name}
-            </span>
-          </div>
-        );
-        return cert.url ? (
-          <a
-            key={cert.name}
-            href={cert.url}
-            target="_blank"
-            rel="noopener noreferrer"
-            aria-label={`${cert.name} – ${'Open credential in new tab'}`}
-            className="focus-visible:ring-2 focus-visible:ring-cyan-400 focus-visible:ring-offset-2 focus-visible:ring-offset-slate-900 rounded-2xl"
-          >
-            {CardInner}
-          </a>
-        ) : (
-          <div key={cert.name}>{CardInner}</div>
-        );
-      })}
+      {certifications.map((cert, idx) => (
+        <CertCard key={cert.name} cert={cert} index={idx} />
+      ))}
     </div>
   </section>
 )};
 
 export default Certifications;
+
+// Animated certification card component
+const CertCard: React.FC<{ cert: Certification; index: number }> = ({ cert, index }) => {
+  const nodeRef = useRef<HTMLDivElement | HTMLAnchorElement | null>(null);
+  useEffect(() => {
+    const node = nodeRef.current;
+    if (!node) return;
+    node.classList.add('opacity-0','translate-y-6','scale-95');
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          node.classList.remove('opacity-0','translate-y-6','scale-95');
+          node.classList.add('opacity-100','translate-y-0','scale-100');
+          observer.disconnect();
+        }
+      });
+    }, { threshold: 0.35 });
+    observer.observe(node);
+    return () => observer.disconnect();
+  }, []);
+
+  const initialSrc = FORCE_LOCAL_ICONS && cert.fallbackIcon ? cert.fallbackIcon : cert.logo;
+  const inner = (
+    <div className="glass p-6 rounded-2xl group hover:scale-105 hover:neon-glow transition-all duration-500 flex flex-col items-center text-center h-full focus:outline-none">
+      <div className="w-16 h-16 mb-4 flex items-center justify-center bg-gray-800/60 rounded-xl p-2 border border-cyan-400/20 relative">
+        {cert.url && (
+          <span className="absolute -top-1 -right-1 bg-cyan-500/80 text-[10px] font-semibold px-1.5 py-0.5 rounded shadow" aria-hidden="true">🔗</span>
+        )}
+        <img
+          src={initialSrc}
+          alt={`${cert.name} logo`}
+          className="max-w-full max-h-full object-contain opacity-90 group-hover:opacity-100 transition-opacity"
+          loading="lazy"
+          onError={(e) => {
+            const target = e.currentTarget as HTMLImageElement & { dataset: { fallbackUsed?: string } };
+            if (!target.dataset.fallbackUsed && cert.fallbackIcon) {
+              target.dataset.fallbackUsed = 'true';
+              target.src = cert.fallbackIcon;
+            }
+          }}
+        />
+      </div>
+      <span className="text-xs font-medium text-gray-300 leading-tight line-clamp-4">{cert.name}</span>
+    </div>
+  );
+  const baseClasses = `transition-all duration-700 will-change-transform delay-[${index * 70}ms]`; 
+  return cert.url ? (
+    <a
+      ref={nodeRef as React.RefObject<HTMLAnchorElement>}
+      href={cert.url}
+      target="_blank"
+      rel="noopener noreferrer"
+      aria-label={`${cert.name} – Open credential in new tab`}
+      className={`focus-visible:ring-2 focus-visible:ring-cyan-400 focus-visible:ring-offset-2 focus-visible:ring-offset-slate-900 rounded-2xl ${baseClasses}`}
+    >
+      {inner}
+    </a>
+  ) : (
+    <div ref={nodeRef as React.RefObject<HTMLDivElement>} className={baseClasses}>{inner}</div>
+  );
+};

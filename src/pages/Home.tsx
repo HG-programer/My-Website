@@ -1,9 +1,10 @@
-import React from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 
 const Home: React.FC = () => {
   const { t } = useTranslation();
+  // Animated metrics data (value can be numeric-like string with + or % suffix)
   const metrics = [
     { value: '16+', label: t('home.impactMetrics.certifications.label'), desc: t('home.impactMetrics.certifications.desc') },
     { value: '12+', label: t('home.impactMetrics.projects.label'), desc: t('home.impactMetrics.projects.desc') },
@@ -56,12 +57,8 @@ const Home: React.FC = () => {
           <div>
             <h2 className="text-3xl font-bold mb-8 bg-gradient-to-r from-purple-400 via-cyan-400 to-green-400 bg-clip-text text-transparent">{t('home.impactMetrics.title')}</h2>
             <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
-              {metrics.map(m => (
-                <div key={m.label} className="glass rounded-2xl p-6 flex flex-col items-center hover:scale-105 transition-transform duration-300 neon-border">
-                  <div className="text-4xl font-extrabold text-cyan-300 tracking-wide">{m.value}</div>
-                  <div className="mt-2 text-gray-200 font-semibold uppercase text-sm tracking-wider">{m.label}</div>
-                  <div className="mt-1 text-xs text-gray-400">{m.desc}</div>
-                </div>
+              {metrics.map((m, idx) => (
+                <MetricCard key={m.label} index={idx} value={m.value} label={m.label} desc={m.desc} />
               ))}
             </div>
           </div>
@@ -102,3 +99,67 @@ const Home: React.FC = () => {
 };
 
 export default Home;
+
+// MetricCard component with scroll-based reveal & count-up animation
+interface MetricCardProps {
+  value: string; // original display value e.g., '16+' or '80%'
+  label: string;
+  desc: string;
+  index: number;
+}
+
+const MetricCard: React.FC<MetricCardProps> = ({ value, label, desc, index }) => {
+  const ref = useRef<HTMLDivElement | null>(null);
+  const [visible, setVisible] = useState(false);
+  const [displayValue, setDisplayValue] = useState<string>(() => (value.match(/^[0-9]+/) ? '0' : value));
+
+  // Extract numeric portion and suffix
+  const match = value.match(/^(\d+)(.*)$/);
+  const targetNumber = match ? parseInt(match[1], 10) : null;
+  const suffix = match ? match[2] : '';
+
+  useEffect(() => {
+    const node = ref.current;
+    if (!node) return;
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            setVisible(true);
+            observer.disconnect();
+          }
+        });
+      },
+      { threshold: 0.4 }
+    );
+    observer.observe(node);
+    return () => observer.disconnect();
+  }, []);
+
+  useEffect(() => {
+    if (!visible || targetNumber === null) return;
+    const duration = 1200; // ms
+    const start = performance.now();
+    const animate = (time: number) => {
+      const progress = Math.min(1, (time - start) / duration);
+      const current = Math.floor(progress * targetNumber);
+      setDisplayValue(current.toString());
+      if (progress < 1) requestAnimationFrame(animate); else setDisplayValue(targetNumber.toString());
+    };
+    requestAnimationFrame(animate);
+  }, [visible, targetNumber]);
+
+  return (
+    <div
+      ref={ref}
+      className={`glass rounded-2xl p-6 flex flex-col items-center transition-all duration-700 neon-border will-change-transform
+        ${visible ? 'opacity-100 translate-y-0 scale-100' : 'opacity-0 translate-y-6 scale-95'} delay-[${index * 75}ms]`}
+    >
+      <div className="text-4xl font-extrabold text-cyan-300 tracking-wide">
+        {targetNumber !== null ? `${displayValue}${suffix}` : value}
+      </div>
+      <div className="mt-2 text-gray-200 font-semibold uppercase text-sm tracking-wider text-center">{label}</div>
+      <div className="mt-1 text-xs text-gray-400 text-center">{desc}</div>
+    </div>
+  );
+};
