@@ -6,7 +6,7 @@ interface Certification {
   name: string;
   logo: string; // original remote (kept if we later want it)
   fallbackIcon?: string;
-  url?: string; // public verification link (will be re-enabled once mapping confirmed)
+  url?: string; // public verification link
 }
 
 // Toggle: set to false if you want to attempt loading remote brand SVGs again
@@ -22,12 +22,13 @@ const createSVGIcon = (text: string, bgColor: string = '#22d3ee') =>
   `)}`;
 
 // Updated certifications list with very reliable image URLs and fallbacks
-// Restored original order and icon mapping; URLs temporarily removed until confirmed
+// Final mapping with provided verification URLs (names kept close to original for i18n consistency)
 const certifications: Certification[] = [
   { 
     name: 'Artificial Intelligence Fundamentals (IBM)', 
     logo: 'https://cdn.worldvectorlogo.com/logos/ibm.svg',
-  fallbackIcon: createSVGIcon('IBM', '#1f77b4')
+  fallbackIcon: createSVGIcon('IBM', '#1f77b4'),
+  url: 'https://www.credly.com/badges/fa3bf869-e936-4001-995e-ab8bcb774389/public_url'
   },
   { 
     name: 'Getting Started with DevOps on AWS', 
@@ -37,62 +38,74 @@ const certifications: Certification[] = [
   { 
     name: 'Hadoop Programming - Level 1 (IBM)', 
     logo: 'https://cdn.worldvectorlogo.com/logos/ibm.svg',
-  fallbackIcon: createSVGIcon('IBM', '#1f77b4')
+  fallbackIcon: createSVGIcon('IBM', '#1f77b4'),
+  url: 'https://www.credly.com/badges/d6c8c0b4-6f95-44a7-b77b-b6d63faca225/public_url'
   },
   { 
     name: 'AWS - Solutions Architecture (Job Simulation)', 
     logo: 'https://cdn.worldvectorlogo.com/logos/aws-2.svg',
-  fallbackIcon: createSVGIcon('AWS', '#ff9900')
+  fallbackIcon: createSVGIcon('AWS', '#ff9900'),
+  url: 'https://forage-uploads-prod.s3.amazonaws.com/completion-certificates/pmnMSL4QiQ9JCgE3W/kkE9HyeNcw6rwCRGw_pmnMSL4QiQ9JCgE3W_J986TYQH4BZJcsc93_1752201895584_completion_certificate.pdf'
   },
   { 
     name: 'AWS Managed Services: Disaster Recovery', 
     logo: 'https://cdn.worldvectorlogo.com/logos/aws-2.svg',
-  fallbackIcon: createSVGIcon('AWS', '#ff9900')
+  fallbackIcon: createSVGIcon('AWS', '#ff9900'),
+  url: 'https://forage-uploads-prod.s3.amazonaws.com/completion-certificates/xhih9yFWsf6AYfngd/HNpZwZcuYwona2d8Y_xhih9yFWsf6AYfngd_J986TYQH4BZJcsc93_1753116581004_completion_certificate.pdf'
   },
   { 
     name: 'Accenture Nordics - Consultant (Job Simulation)', 
     logo: 'https://cdn.worldvectorlogo.com/logos/accenture.svg',
-  fallbackIcon: createSVGIcon('ACC', '#a100ff')
+  fallbackIcon: createSVGIcon('ACC', '#a100ff'),
+  url: 'https://forage-uploads-prod.s3.amazonaws.com/completion-certificates/xhih9yFWsf6AYfngd/KJGjQRHZ6eGquTKfF_xhih9yFWsf6AYfngd_J986TYQH4BZJcsc93_1752138276785_completion_certificate.pdf'
   },
   { 
     name: 'Accenture Nordics - Software Engineering (Job Simulation)', 
     logo: 'https://cdn.worldvectorlogo.com/logos/accenture.svg',
-  fallbackIcon: createSVGIcon('ACC', '#a100ff')
+  fallbackIcon: createSVGIcon('ACC', '#a100ff'),
+  url: 'https://forage-uploads-prod.s3.amazonaws.com/completion-certificates/xhih9yFWsf6AYfngd/HNpZwZcuYwona2d8Y_xhih9yFWsf6AYfngd_J986TYQH4BZJcsc93_1753116581004_completion_certificate.pdf'
   },
   { 
     name: 'Build Your Own Chatbot (IBM)', 
     logo: 'https://cdn.worldvectorlogo.com/logos/ibm.svg',
-  fallbackIcon: createSVGIcon('IBM', '#1f77b4')
+  fallbackIcon: createSVGIcon('IBM', '#1f77b4'),
+  url: 'https://courses.cognitiveclass.ai/certificates/1dfa2dc3923a4741aa3aeba15c6e03cc'
   },
   { 
     name: 'Data Science Foundations - Level 1 (IBM)', 
     logo: 'https://cdn.worldvectorlogo.com/logos/ibm.svg',
-  fallbackIcon: createSVGIcon('IBM', '#1f77b4')
+  fallbackIcon: createSVGIcon('IBM', '#1f77b4'),
+  url: 'https://www.credly.com/badges/11fef2d1-51dc-4aa4-9371-ca9ce5217015'
   },
   { 
     name: 'Deloitte Australia - Cyber Security (Job Simulation)', 
     logo: 'https://cdn.worldvectorlogo.com/logos/deloitte-1.svg',
-  fallbackIcon: createSVGIcon('DEL', '#86bc25')
+  fallbackIcon: createSVGIcon('DEL', '#86bc25'),
+  url: 'https://forage-uploads-prod.s3.amazonaws.com/completion-certificates/9PBTqmSxAf6zZTseP/E9pA6qsdbeyEkp3ti_9PBTqmSxAf6zZTseP_J986TYQH4BZJcsc93_1752637119653_completion_certificate.pdf'
   },
   { 
     name: 'Docker Essentials: A Developer Introduction', 
     logo: 'https://cdn.worldvectorlogo.com/logos/docker.svg',
-  fallbackIcon: createSVGIcon('DOC', '#2496ed')
+  fallbackIcon: createSVGIcon('DOC', '#2496ed'),
+  url: 'https://courses.cognitiveclass.ai/certificates/548cd53cd9354ea19e7babf25ab68fb5'
   },
   { 
     name: 'Tata - Cybersecurity Analyst (Job Simulation)', 
     logo: 'https://cdn.worldvectorlogo.com/logos/tata-2.svg',
-  fallbackIcon: createSVGIcon('TATA', '#1f4e79')
+  fallbackIcon: createSVGIcon('TATA', '#1f4e79'),
+  url: 'https://forage-uploads-prod.s3.amazonaws.com/completion-certificates/ifobHAoMjQs9s6bKS/gmf3ypEXBj2wvfQWC_ifobHAoMjQs9s6bKS_J986TYQH4BZJcsc93_1752125819529_completion_certificate.pdf'
   },
   { 
     name: 'Tata - GenAI Powered Data Analytics (Job Simulation)', 
     logo: 'https://cdn.worldvectorlogo.com/logos/tata-2.svg',
-  fallbackIcon: createSVGIcon('TATA', '#1f4e79')
+  fallbackIcon: createSVGIcon('TATA', '#1f4e79'),
+  url: 'https://forage-uploads-prod.s3.amazonaws.com/completion-certificates/ifobHAoMjQs9s6bKS/gMTdCXwDdLYoXZ3wG_ifobHAoMjQs9s6bKS_J986TYQH4BZJcsc93_1752199339037_completion_certificate.pdf'
   },
   { 
     name: 'Programming with Generative AI (IIT Guwahati)', 
     logo: 'https://cdn.worldvectorlogo.com/logos/iit-guwahati.svg',
-  fallbackIcon: createSVGIcon('IIT', '#004d8f')
+  fallbackIcon: createSVGIcon('IIT', '#004d8f'),
+  url: 'https://www.coursera.org/account/accomplishments/records/45MKMD1XJ9N3'
   },
   { 
     name: 'SQL (Mimo)', 
@@ -102,7 +115,8 @@ const certifications: Certification[] = [
   { 
     name: 'Typing Certificate (Ratatype)', 
     logo: 'https://cdn.worldvectorlogo.com/logos/ratatype.svg',
-  fallbackIcon: createSVGIcon('TYPE', '#ff6b6b')
+  fallbackIcon: createSVGIcon('TYPE', '#ff6b6b'),
+  url: 'https://www.ratatype.com/u6730989/certificate/en_new/'
   },
 ];
 
@@ -129,18 +143,21 @@ const Certifications: React.FC = () => {
     <div className="relative z-10 max-w-7xl mx-auto px-6 grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
       {certifications.map(cert => {
         const initialSrc = FORCE_LOCAL_ICONS && cert.fallbackIcon ? cert.fallbackIcon : cert.logo;
-        return (
+        const CardInner = (
           <div
-            key={cert.name}
-            className="glass p-6 rounded-2xl hover:scale-105 hover:neon-glow transition-all duration-500 flex flex-col items-center text-center"
+            className="glass p-6 rounded-2xl group hover:scale-105 hover:neon-glow transition-all duration-500 flex flex-col items-center text-center h-full focus:outline-none"
           >
-            <div className="w-16 h-16 mb-4 flex items-center justify-center bg-gray-800/60 rounded-xl p-2 border border-cyan-400/20">
+            <div className="w-16 h-16 mb-4 flex items-center justify-center bg-gray-800/60 rounded-xl p-2 border border-cyan-400/20 relative">
+              {cert.url && (
+                <span className="absolute -top-1 -right-1 bg-cyan-500/80 text-[10px] font-semibold px-1.5 py-0.5 rounded shadow" aria-hidden="true">🔗</span>
+              )}
               <img
                 src={initialSrc}
                 alt={`${cert.name} logo`}
-                className="max-w-full max-h-full object-contain opacity-90 hover:opacity-100 transition-opacity"
+                className="max-w-full max-h-full object-contain opacity-90 group-hover:opacity-100 transition-opacity"
+                loading="lazy"
                 onError={(e) => {
-                  const target = e.currentTarget;
+                  const target = e.currentTarget as HTMLImageElement & { dataset: { fallbackUsed?: string } };
                   if (!target.dataset.fallbackUsed && cert.fallbackIcon) {
                     target.dataset.fallbackUsed = 'true';
                     target.src = cert.fallbackIcon;
@@ -148,10 +165,24 @@ const Certifications: React.FC = () => {
                 }}
               />
             </div>
-            <span className="text-xs font-medium text-gray-300 leading-tight">
+            <span className="text-xs font-medium text-gray-300 leading-tight line-clamp-4">
               {cert.name}
             </span>
           </div>
+        );
+        return cert.url ? (
+          <a
+            key={cert.name}
+            href={cert.url}
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label={`${cert.name} – ${'Open credential in new tab'}`}
+            className="focus-visible:ring-2 focus-visible:ring-cyan-400 focus-visible:ring-offset-2 focus-visible:ring-offset-slate-900 rounded-2xl"
+          >
+            {CardInner}
+          </a>
+        ) : (
+          <div key={cert.name}>{CardInner}</div>
         );
       })}
     </div>
