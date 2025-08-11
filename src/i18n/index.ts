@@ -20,6 +20,7 @@ i18n
 export const switchLanguage = (lng: 'en' | 'ja') => {
   i18n.changeLanguage(lng);
   if (typeof window !== 'undefined') localStorage.setItem('lang', lng);
+  if (typeof document !== 'undefined') document.documentElement.lang = lng;
 };
 
 export default i18n;

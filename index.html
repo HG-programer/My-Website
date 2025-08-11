@@ -1,14 +1,18 @@
 <!doctype html>
 <html lang="en">
   <head>
-    <!-- Basic -->
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover" />
     <title>Harshit Gupta | Portfolio</title>
     <meta name="description" content="Portfolio of Harshit Gupta – React & TypeScript developer focusing on modern, accessible web applications." />
+    <meta name="theme-color" content="#0f172a" media="(prefers-color-scheme: light)">
+    <meta name="theme-color" content="#020617" media="(prefers-color-scheme: dark)">
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <link rel="preload" as="image" href="/profile.jpg" imagesrcset="/profile.jpg 1x" fetchpriority="high" />
+    <link rel="preload" as="style" href="/src/index.css" />
+    <link rel="canonical" href="https://harshit-portfolio.pages.dev" />
 
-    <!-- Open Graph / Social -->
+    <!-- Social / Open Graph -->
     <meta property="og:title" content="Harshit Gupta | Portfolio" />
     <meta property="og:description" content="React & TypeScript developer building modern, accessible web experiences." />
     <meta property="og:type" content="website" />
@@ -18,12 +22,16 @@
     <meta name="twitter:title" content="Harshit Gupta | Portfolio" />
     <meta name="twitter:description" content="React & TypeScript developer building modern, accessible web experiences." />
     <meta name="twitter:image" content="/og-image.png" />
-    <link rel="canonical" href="https://harshit-portfolio.pages.dev" />
 
     <!-- Structured Data -->
-    <script type="application/ld+json">
-      {"@context":"https://schema.org","@type":"Person","name":"Harshit Gupta","url":"https://harshit-portfolio.pages.dev","jobTitle":"Frontend Developer","sameAs":[]}
+    <script type="application/ld+json">{"@context":"https://schema.org","@type":"Person","name":"Harshit Gupta","url":"https://harshit-portfolio.pages.dev","jobTitle":"Full Stack & AI Developer","sameAs":[]}</script>
+
+    <!-- Update <html lang> dynamically when i18n switches -->
+    <script>
+      window.addEventListener('storage', (e) => { if (e.key === 'lang') document.documentElement.lang = e.newValue || 'en'; });
+      try { const lng = localStorage.getItem('lang'); if (lng) document.documentElement.lang = lng; } catch(_) {}
     </script>
+    <noscript><style>.js-only{display:none}</style></noscript>
   </head>
   <body class="min-h-screen bg-gray-50 text-gray-900">
     <div id="root"></div>
