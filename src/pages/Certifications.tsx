@@ -4,8 +4,12 @@ import { useTranslation } from 'react-i18next';
 
 interface Certification {
   name: string;
+  issuer: string;
+  issued: string;
   logo: string; // original remote (kept if we later want it)
   fallbackIcon?: string;
+  credentialId?: string;
+  skills?: string[];
   url?: string; // public verification link
 }
 
@@ -21,102 +25,226 @@ const createSVGIcon = (text: string, bgColor: string = '#22d3ee') =>
     </svg>
   `)}`;
 
-// Updated certifications list with very reliable image URLs and fallbacks
-// Final mapping with provided verification URLs (names kept close to original for i18n consistency)
+// Updated certifications list with reliable icons, metadata, and optional credential links
 const certifications: Certification[] = [
-  { 
-    name: 'Artificial Intelligence Fundamentals (IBM)', 
+  {
+    name: 'Accelerated Deep Learning with GPU',
+    issuer: 'IBM',
+    issued: 'Sep 2025',
+    credentialId: 'e0f4c759-6073-4503-bd65-61c65a5f1385',
     logo: 'https://cdn.worldvectorlogo.com/logos/ibm.svg',
-  fallbackIcon: createSVGIcon('IBM', '#1f77b4'),
-  url: 'https://www.credly.com/badges/fa3bf869-e936-4001-995e-ab8bcb774389/public_url'
+    fallbackIcon: createSVGIcon('IBM', '#1f77b4'),
+    url: 'https://www.credly.com/badges/e0f4c759-6073-4503-bd65-61c65a5f1385/public_url',
+    skills: ['Deep Learning', 'Deep Neural Networks (DNN)', 'Convolutional Neural Networks (CNN)'],
   },
-  { 
-    name: 'Getting Started with DevOps on AWS', 
-    logo: 'https://cdn.worldvectorlogo.com/logos/aws-2.svg',
-  fallbackIcon: createSVGIcon('AWS', '#ff9900')
+  {
+    name: 'Basics of Robotics',
+    issuer: 'Siemens Digital Industries Software',
+    issued: 'Sep 2025',
+    credentialId: 'K8P9028T58CR',
+    logo: 'https://cdn.worldvectorlogo.com/logos/siemens-1.svg',
+    fallbackIcon: createSVGIcon('SIE', '#009999'),
+    url: 'https://www.credly.com/badges/K8P9028T58CR/public_url',
+    skills: ['Robotics', 'Robot Operating System (ROS)', 'Robot Programming', 'Robotic Process Automation (RPA)'],
   },
-  { 
-    name: 'Hadoop Programming - Level 1 (IBM)', 
+  {
+    name: 'Deep Learning',
+    issuer: 'IBM',
+    issued: 'Sep 2025',
+    credentialId: '949e63b1-4ad3-4660-8c96-78340a6e2e8d',
     logo: 'https://cdn.worldvectorlogo.com/logos/ibm.svg',
-  fallbackIcon: createSVGIcon('IBM', '#1f77b4'),
-  url: 'https://www.credly.com/badges/d6c8c0b4-6f95-44a7-b77b-b6d63faca225/public_url'
+    fallbackIcon: createSVGIcon('IBM', '#1f77b4'),
+    url: 'https://www.credly.com/badges/949e63b1-4ad3-4660-8c96-78340a6e2e8d/public_url',
+    skills: [
+      'Deep Learning',
+      'Deep Neural Networks (DNN)',
+      'Convolutional Neural Networks (CNN)',
+      'Autoencoder',
+      'Artificial Intelligence (AI)',
+      'Natural Language Processing (NLP)',
+      'Neural Networks',
+      'RBM',
+      'Recurrent Neural Networks (RNN)',
+      'TensorFlow',
+    ],
   },
-  { 
-    name: 'AWS - Solutions Architecture (Job Simulation)', 
+  {
+    name: 'AWS Command Line Interface (Basics)',
+    issuer: 'Amazon Web Services (AWS)',
+    issued: 'Aug 2025',
     logo: 'https://cdn.worldvectorlogo.com/logos/aws-2.svg',
-  fallbackIcon: createSVGIcon('AWS', '#ff9900'),
-  url: 'https://forage-uploads-prod.s3.amazonaws.com/completion-certificates/pmnMSL4QiQ9JCgE3W/kkE9HyeNcw6rwCRGw_pmnMSL4QiQ9JCgE3W_J986TYQH4BZJcsc93_1752201895584_completion_certificate.pdf'
+    fallbackIcon: createSVGIcon('AWS', '#ff9900'),
+    url: 'https://explore.skillbuilder.aws/learn/course/external/view/elearning/17690/aws-command-line-interface-basics',
+    skills: ['CLI', 'Command Prompt', 'AWS Cloud Basics', 'AWS (Amazon Web Services)'],
   },
-  { 
-    name: 'AWS Managed Services: Disaster Recovery', 
+  {
+    name: 'Artificial Intelligence Fundamentals',
+    issuer: 'IBM',
+    issued: 'Aug 2025',
+    credentialId: 'fa3bf869-e936-4001-995e-ab8bcb774389',
+    logo: 'https://cdn.worldvectorlogo.com/logos/ibm.svg',
+    fallbackIcon: createSVGIcon('IBM', '#1f77b4'),
+    url: 'https://www.credly.com/badges/fa3bf869-e936-4001-995e-ab8bcb774389/public_url',
+    skills: ['Artificial Intelligence (AI)', 'Data Science', 'IBM Watson', 'Natural Language Processing (NLP)', 'Machine Learning Algorithms'],
+  },
+  {
+    name: 'Deep Learning Essentials',
+    issuer: 'IBM',
+    issued: 'Aug 2025',
+    credentialId: '9235ba9b-e2ff-449c-aedc-3bf9753ba74e',
+    logo: 'https://cdn.worldvectorlogo.com/logos/ibm.svg',
+    fallbackIcon: createSVGIcon('IBM', '#1f77b4'),
+    url: 'https://www.credly.com/badges/9235ba9b-e2ff-449c-aedc-3bf9753ba74e/public_url',
+    skills: ['Deep Learning', 'Neural Networks', 'Model Evaluation'],
+  },
+  {
+    name: 'Deep Learning with TensorFlow (Advance)',
+    issuer: 'IBM',
+    issued: 'Aug 2025',
+    credentialId: '14072037-6834-4397-af07-ba8916b0e727',
+    logo: 'https://cdn.worldvectorlogo.com/logos/ibm.svg',
+    fallbackIcon: createSVGIcon('IBM', '#1f77b4'),
+    url: 'https://www.credly.com/badges/14072037-6834-4397-af07-ba8916b0e727/public_url',
+    skills: ['Deep Learning', 'TensorFlow', 'RBM', 'Recurrent Neural Networks (RNN)', 'Autoencoder'],
+  },
+  {
+    name: 'Getting Started with DevOps on AWS',
+    issuer: 'Amazon Web Services (AWS)',
+    issued: 'Aug 2025',
     logo: 'https://cdn.worldvectorlogo.com/logos/aws-2.svg',
-  fallbackIcon: createSVGIcon('AWS', '#ff9900'),
-  url: 'https://forage-uploads-prod.s3.amazonaws.com/completion-certificates/xhih9yFWsf6AYfngd/HNpZwZcuYwona2d8Y_xhih9yFWsf6AYfngd_J986TYQH4BZJcsc93_1753116581004_completion_certificate.pdf'
+    fallbackIcon: createSVGIcon('AWS', '#ff9900'),
+    url: 'https://explore.skillbuilder.aws/learn/course/external/view/elearning/18162/getting-started-with-devops-on-aws',
+    skills: ['DevOps', 'AWS (Amazon Web Services)', 'Cloud Computing', 'AWS Cloud Basics'],
   },
-  { 
-    name: 'Accenture Nordics - Consultant (Job Simulation)', 
+  {
+    name: 'Hadoop Programming - Level 1',
+    issuer: 'IBM',
+    issued: 'Aug 2025',
+    credentialId: 'yLuGB5K8D6ygO3bELcDFiw',
+    logo: 'https://cdn.worldvectorlogo.com/logos/ibm.svg',
+    fallbackIcon: createSVGIcon('IBM', '#1f77b4'),
+    url: 'https://courses.cognitiveclass.ai/certificates/yLuGB5K8D6ygO3bELcDFiw',
+    skills: ['Hadoop', 'MapReduce', 'Yarn'],
+  },
+  {
+    name: 'AWS - Solutions Architecture (Job Simulation)',
+    issuer: 'AWS x Forage',
+    issued: 'Jul 2025',
+    credentialId: 'zawjx2wcndBAwhiJ5',
+    logo: 'https://cdn.worldvectorlogo.com/logos/aws-2.svg',
+    fallbackIcon: createSVGIcon('AWS', '#ff9900'),
+    skills: ['Architecture Diagram', 'AWS Pricing', 'Technical Communication'],
+  },
+  {
+    name: 'AWS Managed Services (AMS): Advanced - Disaster Recovery',
+    issuer: 'Amazon Web Services (AWS)',
+    issued: 'Jul 2025',
+    logo: 'https://cdn.worldvectorlogo.com/logos/aws-2.svg',
+    fallbackIcon: createSVGIcon('AWS', '#ff9900'),
+    skills: ['AWS Cloud Basics', 'Disaster Recovery Concepts', 'Cloud Infrastructure', 'Amazon EC2', 'AWS Backup'],
+  },
+  {
+    name: 'Accenture Nordics - Consultant (Job Simulation)',
+    issuer: 'Accenture x Forage',
+    issued: 'Jul 2025',
+    credentialId: 'mQsDtKFFaWLy3zmR7',
     logo: 'https://cdn.worldvectorlogo.com/logos/accenture.svg',
-  fallbackIcon: createSVGIcon('ACC', '#a100ff'),
-  url: 'https://forage-uploads-prod.s3.amazonaws.com/completion-certificates/xhih9yFWsf6AYfngd/KJGjQRHZ6eGquTKfF_xhih9yFWsf6AYfngd_J986TYQH4BZJcsc93_1752138276785_completion_certificate.pdf'
+    fallbackIcon: createSVGIcon('ACC', '#a100ff'),
+    skills: ['Attention to Detail', 'Client Advisory'],
   },
-  { 
-    name: 'Accenture Nordics - Software Engineering (Job Simulation)', 
+  {
+    name: 'Accenture Nordics - Software Engineering (Job Simulation)',
+    issuer: 'Accenture x Forage',
+    issued: 'Jul 2025',
+    credentialId: '2H37F7Zrxr4phPJpp',
     logo: 'https://cdn.worldvectorlogo.com/logos/accenture.svg',
-  fallbackIcon: createSVGIcon('ACC', '#a100ff'),
-  url: 'https://forage-uploads-prod.s3.amazonaws.com/completion-certificates/xhih9yFWsf6AYfngd/HNpZwZcuYwona2d8Y_xhih9yFWsf6AYfngd_J986TYQH4BZJcsc93_1753116581004_completion_certificate.pdf'
+    fallbackIcon: createSVGIcon('ACC', '#a100ff'),
+    skills: ['Agile Methodologies', 'Maturity Assessments', 'Debugging', 'Analysis', 'SSDLC'],
   },
-  { 
-    name: 'Build Your Own Chatbot (IBM)', 
+  {
+    name: 'Build Your Own Chatbot',
+    issuer: 'IBM',
+    issued: 'Jul 2025',
+    credentialId: '1dfa2dc3923a4741aa3aeba15c6e03cc',
     logo: 'https://cdn.worldvectorlogo.com/logos/ibm.svg',
-  fallbackIcon: createSVGIcon('IBM', '#1f77b4'),
-  url: 'https://courses.cognitiveclass.ai/certificates/1dfa2dc3923a4741aa3aeba15c6e03cc'
+    fallbackIcon: createSVGIcon('IBM', '#1f77b4'),
+    url: 'https://courses.cognitiveclass.ai/certificates/1dfa2dc3923a4741aa3aeba15c6e03cc',
+    skills: ['AI Chatbot', 'IBM Watson', 'Conversational Design', 'Chatbot Development', 'NLP'],
   },
-  { 
-    name: 'Data Science Foundations - Level 1 (IBM)', 
+  {
+    name: 'Data Science Foundations - Level 1',
+    issuer: 'IBM',
+    issued: 'Jul 2025',
+    credentialId: '11fef2d1-51dc-4aa4-9371-ca9ce5217015',
     logo: 'https://cdn.worldvectorlogo.com/logos/ibm.svg',
-  fallbackIcon: createSVGIcon('IBM', '#1f77b4'),
-  url: 'https://www.credly.com/badges/11fef2d1-51dc-4aa4-9371-ca9ce5217015'
+    fallbackIcon: createSVGIcon('IBM', '#1f77b4'),
+    url: 'https://www.credly.com/badges/11fef2d1-51dc-4aa4-9371-ca9ce5217015/public_url',
+    skills: ['Data Analysis', 'Data Science', 'Machine Learning', 'Data Literacy'],
   },
-  { 
-    name: 'Deloitte Australia - Cyber Security (Job Simulation)', 
+  {
+    name: 'Deloitte Australia - Cyber Security (Job Simulation)',
+    issuer: 'Deloitte x Forage',
+    issued: 'Jul 2025',
+    credentialId: 'H6rP5MKtuNkYqWykL',
     logo: 'https://cdn.worldvectorlogo.com/logos/deloitte-1.svg',
-  fallbackIcon: createSVGIcon('DEL', '#86bc25'),
-  url: 'https://forage-uploads-prod.s3.amazonaws.com/completion-certificates/9PBTqmSxAf6zZTseP/E9pA6qsdbeyEkp3ti_9PBTqmSxAf6zZTseP_J986TYQH4BZJcsc93_1752637119653_completion_certificate.pdf'
+    fallbackIcon: createSVGIcon('DEL', '#86bc25'),
+    skills: ['Cybersecurity', 'Threat Analysis', 'Incident Response'],
   },
-  { 
-    name: 'Docker Essentials: A Developer Introduction', 
+  {
+    name: 'Docker Essentials: A Developer Introduction',
+    issuer: 'IBM',
+    issued: 'Jul 2025',
+    credentialId: '548cd53cd9354ea19e7babf25ab68fb5',
     logo: 'https://cdn.worldvectorlogo.com/logos/docker.svg',
-  fallbackIcon: createSVGIcon('DOC', '#2496ed'),
-  url: 'https://courses.cognitiveclass.ai/certificates/548cd53cd9354ea19e7babf25ab68fb5'
+    fallbackIcon: createSVGIcon('DOC', '#2496ed'),
+    url: 'https://courses.cognitiveclass.ai/certificates/548cd53cd9354ea19e7babf25ab68fb5',
+    skills: ['DevOps', 'CI/CD', 'Software Deployment', 'Containerization', 'Docker'],
   },
-  { 
-    name: 'Tata - Cybersecurity Analyst (Job Simulation)', 
+  {
+    name: 'Tata - Cybersecurity Analyst (Job Simulation)',
+    issuer: 'Tata x Forage',
+    issued: 'Jul 2025',
+    credentialId: '7ADSicLF5y5nKcZKs',
     logo: 'https://cdn.worldvectorlogo.com/logos/tata-2.svg',
-  fallbackIcon: createSVGIcon('TATA', '#1f4e79'),
-  url: 'https://forage-uploads-prod.s3.amazonaws.com/completion-certificates/ifobHAoMjQs9s6bKS/gmf3ypEXBj2wvfQWC_ifobHAoMjQs9s6bKS_J986TYQH4BZJcsc93_1752125819529_completion_certificate.pdf'
+    fallbackIcon: createSVGIcon('TATA', '#1f4e79'),
+    skills: ['Cybersecurity', 'Risk Assessment', 'Security Strategy'],
   },
-  { 
-    name: 'Tata - GenAI Powered Data Analytics (Job Simulation)', 
+  {
+    name: 'Tata - GenAI Powered Data Analytics (Job Simulation)',
+    issuer: 'Tata x Forage',
+    issued: 'Jul 2025',
+    credentialId: '3zddqZxMYcW9d3S87',
     logo: 'https://cdn.worldvectorlogo.com/logos/tata-2.svg',
-  fallbackIcon: createSVGIcon('TATA', '#1f4e79'),
-  url: 'https://forage-uploads-prod.s3.amazonaws.com/completion-certificates/ifobHAoMjQs9s6bKS/gMTdCXwDdLYoXZ3wG_ifobHAoMjQs9s6bKS_J986TYQH4BZJcsc93_1752199339037_completion_certificate.pdf'
+    fallbackIcon: createSVGIcon('TATA', '#1f4e79'),
+    skills: ['Generative AI', 'Data Analytics', 'Business Insights'],
   },
-  { 
-    name: 'Programming with Generative AI (IIT Guwahati)', 
+  {
+    name: 'Programming with Generative AI',
+    issuer: 'Indian Institute of Technology, Guwahati',
+    issued: 'May 2025',
+    credentialId: '45MKMD1XJ9N3',
     logo: 'https://cdn.worldvectorlogo.com/logos/iit-guwahati.svg',
-  fallbackIcon: createSVGIcon('IIT', '#004d8f'),
-  url: 'https://www.coursera.org/account/accomplishments/records/45MKMD1XJ9N3'
+    fallbackIcon: createSVGIcon('IIT', '#004d8f'),
+    url: 'https://www.coursera.org/account/accomplishments/verify/45MKMD1XJ9N3',
+    skills: ['Generative AI', 'GitHub Copilot', 'VS Code', 'GitHub'],
   },
-  { 
-    name: 'SQL (Mimo)', 
+  {
+    name: 'SQL',
+    issuer: 'Mimo',
+    issued: 'Aug 2024',
     logo: 'https://cdn.worldvectorlogo.com/logos/mysql-logo.svg',
-    fallbackIcon: createSVGIcon('SQL', '#4479a1')
+    fallbackIcon: createSVGIcon('SQL', '#4479a1'),
+    skills: ['SQL', 'Database Management System (DBMS)'],
   },
-  { 
-    name: 'Typing Certificate (Ratatype)', 
+  {
+    name: 'Typing Certificate',
+    issuer: 'Ratatype',
+    issued: 'Jan 2024',
+    credentialId: '6730989',
     logo: 'https://cdn.worldvectorlogo.com/logos/ratatype.svg',
-  fallbackIcon: createSVGIcon('TYPE', '#ff6b6b'),
-  url: 'https://www.ratatype.com/u6730989/certificate/en_new/'
+    fallbackIcon: createSVGIcon('TYPE', '#ff6b6b'),
+    url: 'https://www.ratatype.com/u6730989/certificate/en/',
+    skills: ['Typing'],
   },
 ];
 
