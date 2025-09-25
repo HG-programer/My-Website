@@ -2,7 +2,7 @@ name: Deploy to GitHub Pages
 
 on:
   push:
-    branches: [ main ]
+    branches: [ main, master ]
   workflow_dispatch:
 
 permissions:
@@ -33,6 +33,13 @@ jobs:
     - name: Build
       run: npm run build
       
+    - name: List built files
+      run: |
+        echo "Contents of dist directory:"
+        ls -la dist/
+        echo "Checking if 404.html exists:"
+        test -f dist/404.html && echo "404.html found" || echo "404.html NOT found"
+        
     - name: Setup Pages
       uses: actions/configure-pages@v5
       
