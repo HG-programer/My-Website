@@ -1,0 +1,17 @@
+{
+  "name": "Harshit Gupta | AI-Focused Software Engineer",
+  "short_name": "Harshit Gupta",
+  "description": "AI-focused full-stack engineer creating secure, scalable, multilingual experiences for Japanese tech teams.",
+  "start_url": "/My-Website/",
+  "display": "standalone",
+  "background_color": "#0f172a",
+  "theme_color": "#06b6d4",
+  "icons": [
+    {
+      "src": "/My-Website/profile.jpg",
+      "sizes": "512x512",
+      "type": "image/jpeg",
+      "purpose": "any maskable"
+    }
+  ]
+}
