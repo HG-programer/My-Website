@@ -26,7 +26,7 @@ const Contact: React.FC = () => {
             <h3 className="text-cyan-400 font-semibold text-xl mb-2">{t('contact.github.title')}</h3>
           <p className="text-gray-300 text-sm">{t('contact.github.value')}</p>
         </a>
-        <a href="https://www.linkedin.com/in/harshit-gupta-ai-developer" target="_blank" rel="noopener noreferrer" className="glass p-6 rounded-2xl hover:scale-105 transition-all duration-300 neon-border group block">
+  <a href="https://www.linkedin.com/in/harshit-gupta-ai-developer/" target="_blank" rel="noopener noreferrer" className="glass p-6 rounded-2xl hover:scale-105 transition-all duration-300 neon-border group block">
           <div className="text-4xl mb-4 group-hover:scale-110 transition-transform">💼</div>
           <h3 className="text-cyan-400 font-semibold text-xl mb-2">{t('contact.linkedin.title')}</h3>
           <p className="text-gray-300 text-sm">{t('contact.linkedin.value')}</p>
