@@ -299,8 +299,10 @@ const CertCard: React.FC<{ cert: Certification; index: number }> = ({ cert, inde
   }, []);
 
   const initialSrc = FORCE_LOCAL_ICONS && cert.fallbackIcon ? cert.fallbackIcon : cert.logo;
+  const skillsToShow = cert.skills?.slice(0, 6);
+
   const inner = (
-    <div className="glass p-6 rounded-2xl group hover:scale-105 hover:neon-glow transition-all duration-500 flex flex-col items-center text-center h-full focus:outline-none">
+    <div className="glass p-6 rounded-2xl group hover:scale-105 hover:neon-glow transition-all duration-500 flex flex-col text-center h-full focus:outline-none">
       <div className="w-16 h-16 mb-4 flex items-center justify-center bg-gray-800/60 rounded-xl p-2 border border-cyan-400/20 relative">
         {cert.url && (
           <span className="absolute -top-1 -right-1 bg-cyan-500/80 text-[10px] font-semibold px-1.5 py-0.5 rounded shadow" aria-hidden="true">🔗</span>
@@ -319,7 +321,32 @@ const CertCard: React.FC<{ cert: Certification; index: number }> = ({ cert, inde
           }}
         />
       </div>
-      <span className="text-xs font-medium text-gray-300 leading-tight line-clamp-4">{cert.name}</span>
+      <div className="flex flex-col items-center gap-3">
+        <div className="space-y-2">
+          <span className="text-sm font-semibold text-gray-100 leading-snug block line-clamp-3">{cert.name}</span>
+          <div className="text-xs text-cyan-200/90 leading-relaxed">
+            <p className="font-medium">{cert.issuer}</p>
+            <p className="uppercase tracking-wide text-[11px] text-cyan-100/70">{cert.issued}</p>
+            {cert.credentialId && (
+              <p className="text-[10px] text-gray-300/80 mt-1">
+                Credential ID: <span className="font-mono">{cert.credentialId}</span>
+              </p>
+            )}
+          </div>
+        </div>
+        {skillsToShow && skillsToShow.length > 0 && (
+          <ul className="flex flex-wrap justify-center gap-1.5 max-w-[14rem]">
+            {skillsToShow.map((skill) => (
+              <li
+                key={skill}
+                className="text-[10px] md:text-[11px] px-2 py-1 rounded-full bg-cyan-500/10 border border-cyan-300/30 text-cyan-100 whitespace-nowrap"
+              >
+                {skill}
+              </li>
+            ))}
+          </ul>
+        )}
+      </div>
     </div>
   );
   const baseClasses = `transition-all duration-700 will-change-transform delay-[${index * 70}ms]`; 
