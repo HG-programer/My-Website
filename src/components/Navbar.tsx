@@ -3,6 +3,8 @@ import { Link, NavLink } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 import { switchLanguage } from '../i18n';
 
+const profileImage = `${import.meta.env.BASE_URL}profile.jpg`;
+
 const Navbar: React.FC = () => {
   const [open, setOpen] = useState(false);
   const { t, i18n } = useTranslation();
@@ -24,7 +26,7 @@ const Navbar: React.FC = () => {
           className="flex items-center space-x-3 hover:scale-105 transition-transform duration-300"
         >
           <img
-            src="/profile.jpg"
+            src={profileImage}
             alt="Harshit Gupta profile"
             className="w-10 h-10 rounded-full object-cover border-2 border-cyan-400 shadow-lg neon-glow"
           />

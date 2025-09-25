@@ -15,7 +15,7 @@ const Contact = lazy(() => import('./pages/Contact'));
 const App: React.FC = () => {
   return (
     <HelmetProvider>
-      <Router>
+      <Router basename={import.meta.env.BASE_URL}>
         {/* Skip link for accessibility */}
         <a
           href="#main"

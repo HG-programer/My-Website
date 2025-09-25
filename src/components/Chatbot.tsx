@@ -3,6 +3,7 @@ import { useTranslation } from 'react-i18next';
 
 interface ChatMessage { id: string; role: 'user' | 'assistant'; text: string; ts: number; }
 interface IntentDef { id: string; keywords: string[]; responseKey: string; }
+interface ChatApiResponse { reply?: string }
 
 const intents: IntentDef[] = [
   { id: 'greet', keywords: ['hello','hi','hey','こんにちは','やあ'], responseKey: 'chatbot.intents.greet' },
@@ -22,7 +23,7 @@ const Chatbot: React.FC = () => {
   const [input, setInput] = useState('');
   const [thinking, setThinking] = useState(false);
   const bottomRef = useRef<HTMLDivElement | null>(null);
-  const API_URL = (import.meta as any)?.env?.VITE_CHAT_API_URL || '/api/chat';
+  const API_URL = import.meta.env.VITE_CHAT_API_URL ?? '/api/chat';
 
   useEffect(() => {
     bottomRef.current?.scrollIntoView({ behavior: 'smooth' });
@@ -96,10 +97,11 @@ const Chatbot: React.FC = () => {
   // }
 
   const send = async () => {
-    if (!input.trim()) return;
-    const userText = input.trim();
-    const userMsg: ChatMessage = { id: crypto.randomUUID(), role: 'user', text: userText, ts: Date.now() };
-    setMessages(m => [...m, userMsg]);
+  if (!input.trim()) return;
+  const userText = input.trim();
+  const userMsg: ChatMessage = { id: crypto.randomUUID(), role: 'user', text: userText, ts: Date.now() };
+  const recentHistory = [...messages.slice(-6), userMsg];
+  setMessages(m => [...m, userMsg]);
     setInput('');
     setThinking(true);
     const started = performance.now();
@@ -107,17 +109,20 @@ const Chatbot: React.FC = () => {
       const res = await fetch(API_URL, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ message: userText, history: messages.slice(-6).map(m => ({ role: m.role, content: m.text })) })
+        body: JSON.stringify({
+          message: userText,
+          history: recentHistory.map(m => ({ role: m.role, content: m.text }))
+        })
       });
       const ms = Math.round(performance.now() - started);
       if (res.ok) {
-        let data: any = null;
-        try { data = await res.json(); } catch { /* ignore parse */ }
-        if (data?.reply) {
-          console.debug('[chatbot] remote reply', { ms, length: data.reply.length });
-            setMessages(m => [...m, { id: crypto.randomUUID(), role: 'assistant', text: data.reply, ts: Date.now() }]);
-            setThinking(false);
-            return;
+        const data: ChatApiResponse | null = await res.json().catch(() => null);
+        const reply = data?.reply;
+        if (reply) {
+          console.debug('[chatbot] remote reply', { ms, length: reply.length });
+          setMessages(m => [...m, { id: crypto.randomUUID(), role: 'assistant', text: reply, ts: Date.now() }]);
+          setThinking(false);
+          return;
         } else {
           console.warn('[chatbot] empty remote reply', { ms, status: res.status });
         }
@@ -129,8 +134,8 @@ const Chatbot: React.FC = () => {
       // fallback (remote failed or empty)
       const replyText = buildAssistantReply(userText);
       setMessages(m => [...m, { id: crypto.randomUUID(), role: 'assistant', text: replyText + ' (fallback)', ts: Date.now() }]);
-    } catch (e: any) {
-      console.error('[chatbot] network error', e);
+    } catch (error: unknown) {
+      console.error('[chatbot] network error', error);
       const replyText = buildAssistantReply(userText);
       setMessages(m => [...m, { id: crypto.randomUUID(), role: 'assistant', text: replyText + ' (offline)', ts: Date.now() }]);
     } finally {

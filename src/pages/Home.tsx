@@ -2,6 +2,8 @@ import React, { useEffect, useRef, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 
+const profileImage = `${import.meta.env.BASE_URL}profile.jpg`;
+
 const Home: React.FC = () => {
   const { t } = useTranslation();
   // Animated metrics data (value can be numeric-like string with + or % suffix)
@@ -20,7 +22,7 @@ const Home: React.FC = () => {
       <div className="relative z-10 flex flex-col lg:flex-row items-center gap-12 px-6 max-w-7xl mx-auto">
         <div className="glass p-8 rounded-2xl relative">
           <img
-            src="/profile.jpg"
+            src={profileImage}
             alt="Harshit Gupta profile"
             className="w-64 h-64 lg:w-80 lg:h-80 rounded-2xl object-cover border-4 border-cyan-400 shadow-2xl neon-glow hover:scale-105 transition-transform duration-500" 
           />
