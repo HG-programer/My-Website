@@ -11,6 +11,21 @@ This is a fresh, professional portfolio website built with React, Vite, TypeScri
 - All styling with Tailwind CSS
 - Reusable PageSection component
 
+## GitHub Pages Deployment
+
+⚠️ **Important**: For GitHub Pages to work, this repository must be **public**. GitHub Pages doesn't support private repositories on free accounts.
+
+### Deployment Status
+- ✅ Build configuration is ready
+- ✅ GitHub Actions workflow is configured  
+- ✅ 404.html with SPA routing is included
+- ❌ Repository needs to be public for deployment
+
+### After making repository public:
+1. Go to repository Settings → Pages
+2. Select "GitHub Actions" as source
+3. Site will be available at: https://hg-programer.github.io/My-Website/
+
 ## Getting Started
 
 1. Install dependencies:

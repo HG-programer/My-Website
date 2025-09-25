@@ -33,12 +33,14 @@ jobs:
     - name: Build
       run: npm run build
       
-    - name: List built files
+    - name: Remove Netlify-specific files (not needed for GitHub Pages)
       run: |
-        echo "Contents of dist directory:"
+        echo "Removing Netlify-specific files from dist..."
+        rm -f dist/_redirects dist/_headers
+        echo "Contents of dist directory after cleanup:"
         ls -la dist/
-        echo "Checking if 404.html exists:"
-        test -f dist/404.html && echo "404.html found" || echo "404.html NOT found"
+        echo "Verifying 404.html exists for SPA routing:"
+        test -f dist/404.html && echo "404.html found ✓" || echo "404.html NOT found ✗"
         
     - name: Setup Pages
       uses: actions/configure-pages@v5
