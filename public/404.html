@@ -1,22 +1,16 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="utf-8" />
     <title>Redirecting…</title>
-  <meta http-equiv="refresh" content="0; url=/My-Website/" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta http-equiv="refresh" content="0; url=/My-Website/" />
     <script>
-      (function () {
-        var redirectPath = window.location.pathname.replace(/^\/My-Website/, "");
-        var search = window.location.search || "";
-        var hash = window.location.hash || "";
-        var target = "/My-Website/" + redirectPath.replace(/^\//, "") + search + hash;
-        window.location.replace(target);
-      })();
+      sessionStorage.setItem('spa-redirect', window.location.pathname + window.location.search + window.location.hash);
     </script>
     <style>
       body {
-        font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+        font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
         background: #0f172a;
         color: #e2e8f0;
         display: grid;

@@ -50,6 +50,23 @@
 		<title>Harshit Gupta | AI-Focused Software Engineer</title>
 	</head>
 	<body class="antialiased text-gray-100 bg-slate-950">
+		<script>
+			(function () {
+				const key = 'spa-redirect';
+				const stored = sessionStorage.getItem(key);
+				if (!stored) return;
+				sessionStorage.removeItem(key);
+				const url = new URL(stored, window.location.origin);
+				const basePath = '/My-Website';
+				let path = url.pathname;
+				if (!path.startsWith(basePath)) {
+					path = `${basePath}${path.startsWith('/') ? path : `/${path}`}`;
+				}
+				const normalised = path.replace(/\/{2,}/g, '/');
+				const resolved = `${normalised}${url.search}${url.hash}` || `${basePath}/`;
+				window.history.replaceState(null, '', resolved);
+			})();
+		</script>
 		<div id="root"></div>
 		<script type="application/ld+json">
 			{
