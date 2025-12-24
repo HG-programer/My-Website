@@ -23,11 +23,21 @@ const Navbar: React.FC = () => {
           to="/"
           className="flex items-center space-x-3 hover:scale-105 transition-transform duration-300"
         >
-          <img
-            src="/profile.jpg"
-            alt="Harshit Gupta profile"
-            className="w-10 h-10 rounded-full object-cover border-2 border-cyan-400 shadow-lg neon-glow"
-          />
+          <div className="relative w-10 h-10">
+            <img
+              src="/profile.jpg"
+              alt="Harshit Gupta"
+              className="w-full h-full rounded-full object-cover border-2 border-cyan-400 shadow-lg neon-glow absolute inset-0"
+              onError={(e) => {
+                e.currentTarget.style.display = 'none';
+                const fallback = e.currentTarget.nextElementSibling as HTMLElement;
+                if (fallback) fallback.style.display = 'flex';
+              }}
+            />
+            <div className="w-full h-full rounded-full bg-gradient-to-br from-cyan-400 to-purple-500 border-2 border-cyan-400 shadow-lg neon-glow hidden items-center justify-center">
+              <span className="text-white font-bold text-sm">HG</span>
+            </div>
+          </div>
           <span className="text-xl font-bold bg-gradient-to-r from-purple-400 via-cyan-400 to-green-400 bg-clip-text text-transparent">
             Harshit Gupta
           </span>

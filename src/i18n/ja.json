@@ -1,12 +1,13 @@
 {
   "hero": {
     "title": "ハルシット・グプタ",
-    "tagline1": "フルスタック＆AI開発者",
+    "tagline1": "ソフトウェアエンジニア＆AI開発",
     "tagline2": "生成AIスペシャリスト",
     "tagline3": "日本テック志向",
-    "intro": "最先端のAI・クラウド・UXで明日のソリューションを創造。日本のデジタル変革に貢献します。",
+    "intro": "AIを軸にしたエンジニアリングとクラウド基盤で信頼性のある体験を設計。日本的な緻密さを大切に未来をつくります。",
     "viewProjects": "プロジェクトを見る",
-    "aboutMe": "プロフィール"
+    "aboutMe": "プロフィール",
+    "jpBadge": "ソフトウェアエンジニア / 生成AI"
   },
   "nav": {
     "home": "ホーム",
@@ -22,7 +23,7 @@
       "certifications": {"label": "認定資格", "desc": "LinkedIn ＆ 業界"},
       "projects": {"label": "プロジェクト", "desc": "AI ＆ フルスタック"},
       "aiFocus": {"label": "AI領域", "value": "生成AI", "desc": "LLM＆プロンプト"},
-      "jpLearning": {"label": "日本語学習", "value": "290+ 🔥", "desc": "継続日数"}
+      "jpLearning": {"label": "日本語学習", "value": "421+ 🔥", "desc": "140k+ XP、スコア19"}
     },
     "coreTechStack": {"title": "主要技術スタック"},
     "currentlyBuilding": {
@@ -43,7 +44,7 @@
       ]
     },
     "cta": {
-      "text": "日本向けイノベーションを中心に、AI＆フルスタック分野での共同開発を歓迎します。",
+      "text": "日本向けイノベーションを中心に、AI＆ソフトウェアエンジニアリングでの共同開発を歓迎します。",
       "collaborate": "協業する",
       "certifications": "資格一覧"
     }
@@ -134,7 +135,8 @@
   "certifications": {
     "meta": {"title": "認定資格 | ハルシット・グプタ", "description": "AI・クラウド・開発に関する専門資格。"},
     "title": "CERTIFICATIONS",
-    "subtitle": "AI・クラウド・開発分野の専門知識を示す資格"
+    "subtitle": "AI・クラウド・開発分野の専門知識を示す資格",
+    "streak": "日本語学習421日連続、140k+ XP、スコア19"
   },
   "notFound": {
     "title": "404",
@@ -167,3 +169,4 @@
     }
   }
 }
+

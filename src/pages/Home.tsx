@@ -6,8 +6,8 @@ import { useTranslation } from 'react-i18next';
 const Home: React.FC = () => {
   const { t } = useTranslation();
   const metrics = [
-    { value: '16+', label: t('home.impactMetrics.certifications.label'), desc: t('home.impactMetrics.certifications.desc') },
-    { value: '12+', label: t('home.impactMetrics.projects.label'), desc: t('home.impactMetrics.projects.desc') },
+    { value: '42+', label: t('home.impactMetrics.certifications.label'), desc: t('home.impactMetrics.certifications.desc') },
+    { value: '15+', label: t('home.impactMetrics.projects.label'), desc: t('home.impactMetrics.projects.desc') },
     { value: t('home.impactMetrics.aiFocus.value'), label: t('home.impactMetrics.aiFocus.label'), desc: t('home.impactMetrics.aiFocus.desc') },
     { value: t('home.impactMetrics.jpLearning.value'), label: t('home.impactMetrics.jpLearning.label'), desc: t('home.impactMetrics.jpLearning.desc') }
   ];
@@ -15,28 +15,46 @@ const Home: React.FC = () => {
   const growth = t('home.learningGrowth.items', { returnObjects: true }) as string[];
   const techStack = ['TypeScript','React','Django','Spring Boot','Python','Java','AWS','Docker','Git','TailwindCSS','REST APIs','SQL'];
   return (
-  <section className="relative cyber-grid min-h-screen flex flex-col items-center justify-center text-center overflow-hidden">
+  <section className="relative cyber-grid jp-hero min-h-screen flex flex-col items-center justify-center text-center overflow-hidden">
     <Helmet>
-      <title>Harshit Gupta | Futuristic Portfolio</title>
-      <meta name="description" content="Full Stack & AI Developer building the future with cutting-edge technology" />
-      <meta property="og:title" content="Harshit Gupta | Futuristic Portfolio" />
-      <meta property="og:description" content="Full Stack & AI Developer with vision for Japan's tech future" />
+      <title>Harshit Gupta | Software Engineer</title>
+      <meta name="description" content="Software Engineer & AI Developer building the future with cutting-edge technology" />
+      <meta property="og:title" content="Harshit Gupta | Software Engineer" />
+      <meta property="og:description" content="Software Engineer & AI Developer with vision for Japan's tech future" />
     </Helmet>
+
+    {/* Japanese-inspired atmospheric layers */}
+    <div className="sunrise-orb" aria-hidden />
+    <div className="asanoha-layer" aria-hidden />
+    <div className="jp-rising-lines" aria-hidden />
     
     <div className="relative z-10 flex flex-col lg:flex-row items-center gap-12 px-6 max-w-7xl mx-auto">
-      <div className="glass p-8 rounded-2xl relative">
-        <img
-          src="/profile.jpg"
-          alt="Harshit Gupta profile"
-          className="w-64 h-64 lg:w-80 lg:h-80 rounded-2xl object-cover border-4 border-cyan-400 shadow-2xl neon-glow hover:scale-105 transition-transform duration-500" 
-        />
-        <div className="absolute inset-0 bg-gradient-to-r from-purple-500/20 to-cyan-500/20 rounded-2xl animate-pulse" />
+      <div className="glass p-8 rounded-2xl relative overflow-hidden">
+        <div className="relative w-64 h-64 lg:w-80 lg:h-80">
+          <img
+            src="/profile.jpg"
+            alt="Harshit Gupta profile"
+            className="w-full h-full rounded-2xl object-cover border-4 border-cyan-400 shadow-2xl neon-glow hover:scale-105 transition-transform duration-500 relative z-10 absolute inset-0" 
+            onError={(e) => {
+              e.currentTarget.style.display = 'none';
+              const fallback = e.currentTarget.nextElementSibling as HTMLElement;
+              if (fallback) fallback.style.display = 'flex';
+            }}
+          />
+          <div className="w-full h-full rounded-2xl border-4 border-cyan-400 shadow-2xl neon-glow bg-gradient-to-br from-cyan-400 to-purple-500 hidden items-center justify-center absolute inset-0 z-10">
+            <span className="text-white font-bold text-6xl">HG</span>
+          </div>
+        </div>
+        <div className="absolute inset-0 bg-gradient-to-r from-purple-500/20 to-cyan-500/20 rounded-2xl animate-pulse pointer-events-none" />
       </div>
       
       <div className="flex flex-col items-center lg:items-start max-w-2xl glass p-8 rounded-2xl">
-        <h1 className="text-5xl lg:text-7xl font-bold mb-6">
+        <h1 className="text-5xl lg:text-7xl font-bold mb-4">
           {t('hero.title')}
         </h1>
+        <div className="jp-badge mb-6">
+          <span className="text-sm font-semibold text-rose-100">{t('hero.jpBadge')}</span>
+        </div>
         <div className="text-xl lg:text-2xl mb-8 text-cyan-300 font-light">
           <span className="block mb-2">🚀 {t('hero.tagline1')}</span>
           <span className="block mb-2">🤖 {t('hero.tagline2')}</span>

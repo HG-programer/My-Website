@@ -17,10 +17,10 @@ const Footer: React.FC = () => {
       <div className="container mx-auto px-4 py-10 text-center relative z-10">
         <p className="mb-4 font-jp-serif text-gold tracking-wide">Connect with me</p>
         <div className="flex justify-center space-x-8 mb-8">
-          <a href="https://linkedin.com/in/yourprofile" target="_blank" rel="noopener noreferrer" className="hover:scale-110 transition" aria-label="LinkedIn profile">
+          <a href="https://www.linkedin.com/in/harshit-gupta-ai-developer" target="_blank" rel="noopener noreferrer" className="hover:scale-110 transition" aria-label="LinkedIn profile">
             <FaLinkedin className="w-7 h-7 text-white/80 hover:text-white" />
           </a>
-          <a href="https://github.com/yourprofile" target="_blank" rel="noopener noreferrer" className="hover:scale-110 transition" aria-label="GitHub profile">
+          <a href="https://github.com/HG-programer" target="_blank" rel="noopener noreferrer" className="hover:scale-110 transition" aria-label="GitHub profile">
             <FaGithub className="w-7 h-7 text-white/80 hover:text-white" />
           </a>
         </div>

@@ -1,12 +1,13 @@
 {
   "hero": {
     "title": "HARSHIT GUPTA",
-    "tagline1": "Full Stack & AI Developer",
+    "tagline1": "Software Engineer & AI Developer",
     "tagline2": "Generative AI Specialist",
     "tagline3": "Japan Tech Visionary",
-    "intro": "Building tomorrow's solutions today with cutting-edge AI, cloud infrastructure, and immersive user experiences. Ready to revolutionize Japan's digital landscape.",
+    "intro": "Crafting reliable systems and intelligent experiences with AI-forward engineering, cloud foundations, and Japanese-inspired attention to detail.",
     "viewProjects": "View Projects",
-    "aboutMe": "About Me"
+    "aboutMe": "About Me",
+    "jpBadge": "ソフトウェアエンジニア / 生成AI"
   },
   "nav": {
     "home": "Home",
@@ -22,7 +23,7 @@
       "certifications": {"label": "Certifications", "desc": "LinkedIn & Industry"},
       "projects": {"label": "Projects", "desc": "AI & Full Stack"},
       "aiFocus": {"label": "AI Focus", "value": "GenAI", "desc": "LLMs & Prompt Systems"},
-      "jpLearning": {"label": "JP Learning", "value": "290+ 🔥", "desc": "Day Streak"}
+      "jpLearning": {"label": "JP Learning", "value": "421+ 🔥", "desc": "140k+ XP, Score 19"}
     },
     "coreTechStack": {"title": "Core Tech Stack"},
     "currentlyBuilding": {
@@ -43,7 +44,7 @@
       ]
     },
     "cta": {
-      "text": "Open to collaboration on impactful AI & full stack initiatives—especially Japan-focused innovation.",
+      "text": "Open to collaboration on impactful AI & software engineering initiatives—especially Japan-focused innovation.",
       "collaborate": "Collaborate",
       "certifications": "Certifications"
     }
@@ -134,7 +135,8 @@
   "certifications": {
     "meta": {"title": "Certifications | Harshit Gupta", "description": "Professional certifications across AI, Cloud, and Development."},
     "title": "CERTIFICATIONS",
-    "subtitle": "Industry-recognized credentials showcasing expertise across AI, Cloud, and Development"
+    "subtitle": "Industry-recognized credentials showcasing expertise across AI, Cloud, and Development",
+    "streak": "421-day Japanese streak, 140k+ XP, score 19"
   },
   "notFound": {
     "title": "404",
@@ -167,3 +169,4 @@
     }
   }
 }
+
