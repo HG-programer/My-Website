@@ -62,9 +62,9 @@
       "frameworks": "Frameworks:",
       "domains": "Domains:",
       "tools": "Tools:",
-      "languagesList": "Python, Java, JavaScript/TypeScript, SQL",
-      "frameworksList": "React, Django, Spring Boot",
-      "domainsList": "Generative AI, Cloud (AWS), Web, IT Support",
+      "languagesList": "Python, Java, JavaScript, SQL",
+      "frameworksList": "React, Django, FastAPI",
+      "domainsList": "Generative AI, Machine Learning, Robotics, Cloud Infrastructure, Web",
       "toolsList": "Git, CI/CD fundamentals, Container basics (Docker)"
     },
     "interdisciplinary": {
@@ -96,7 +96,7 @@
     "build": {"title": "🚀 Let's Build Something Amazing"},
     "areas": {
       "ai": {"title": "🤖 AI & Machine Learning", "desc": "Generative AI, LLMs, Data Analytics"},
-      "fullstack": {"title": "💻 Full Stack Development", "desc": "React, Django, Spring Boot, TypeScript"},
+      "fullstack": {"title": "💻 Full Stack Development", "desc": "React, Django, FastAPI, Python"},
       "cloud": {"title": "☁️ Cloud Solutions", "desc": "AWS, Docker, CI/CD, Scalable Systems"},
       "japan": {"title": "🇯🇵 Japan-Focused", "desc": "Cultural alignment, Japanese language"}
     },
@@ -157,7 +157,7 @@
     "intents": {
       "greet": "Hello! How can I help? You can ask about projects, skills, or contact details.",
       "projects": "I build AI + full stack projects like Haru-GPT, InsightLens, and TaskNova. Open the Projects page for details.",
-      "skills": "Core stack: React, TypeScript, Python, Java, Generative AI, AWS fundamentals, and cloud-ready architectures.",
+      "skills": "Core stack: React, Python, Java, Generative AI, Machine Learning, Robotics, Cloud Infrastructure, and cloud-ready architectures.",
       "contact": "Reach me via email: harshitg933@gmail.com or LinkedIn (see Contact page).",
       "fallback": "I’m not sure yet—try asking about projects, skills, or contact."
     },

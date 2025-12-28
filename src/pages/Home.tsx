@@ -13,7 +13,7 @@ const Home: React.FC = () => {
   ];
   const building = t('home.currentlyBuilding.items', { returnObjects: true }) as string[];
   const growth = t('home.learningGrowth.items', { returnObjects: true }) as string[];
-  const techStack = ['TypeScript','React','Django','Spring Boot','Python','Java','AWS','Docker','Git','TailwindCSS','REST APIs','SQL'];
+  const techStack = ['React','Django','Python','Java','Generative AI','Machine Learning','Robotics','Cloud Infrastructure','AWS','Docker','Git','TailwindCSS','REST APIs','SQL'];
   return (
   <section className="relative cyber-grid jp-hero min-h-screen flex flex-col items-center justify-center text-center overflow-hidden">
     <Helmet>

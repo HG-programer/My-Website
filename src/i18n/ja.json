@@ -62,9 +62,9 @@
       "frameworks": "フレームワーク:",
       "domains": "領域:",
       "tools": "ツール:",
-      "languagesList": "Python, Java, JavaScript/TypeScript, SQL",
-      "frameworksList": "React, Django, Spring Boot",
-      "domainsList": "生成AI, クラウド(AWS), Web, ITサポート",
+      "languagesList": "Python, Java, JavaScript, SQL",
+      "frameworksList": "React, Django, FastAPI",
+      "domainsList": "生成AI, 機械学習, ロボティクス, クラウドインフラ, Web",
       "toolsList": "Git, CI/CD基礎, Docker(コンテナ基礎)"
     },
     "interdisciplinary": {
@@ -96,7 +96,7 @@
     "build": {"title": "🚀 共に素晴らしいものを"},
     "areas": {
       "ai": {"title": "🤖 AI・機械学習", "desc": "生成AI, LLM, データ分析"},
-      "fullstack": {"title": "💻 フルスタック開発", "desc": "React, Django, Spring Boot, TypeScript"},
+      "fullstack": {"title": "💻 フルスタック開発", "desc": "React, Django, FastAPI, Python"},
       "cloud": {"title": "☁️ クラウドソリューション", "desc": "AWS, Docker, CI/CD, スケール"},
       "japan": {"title": "🇯🇵 日本志向", "desc": "文化適合・日本語"}
     },
@@ -157,7 +157,7 @@
     "intents": {
       "greet": "こんにちは！どんなことを知りたいですか？ プロジェクト・スキル・連絡先など聞けます。",
       "projects": "Haru-GPT や InsightLens、TaskNova など AI＋フルスタック開発を行っています。詳しくはプロジェクトページへ。",
-      "skills": "主なスキル: React, TypeScript, Python, Java, 生成AI, AWS基礎, クラウド指向アーキテクチャ。",
+      "skills": "主なスキル: React, Python, Java, 生成AI, 機械学習, ロボティクス, クラウドインフラ。",
       "contact": "メール: harshitg933@gmail.com または LinkedIn (連絡ページ参照)。",
       "fallback": "まだ理解できませんでした。プロジェクト・スキル・連絡先について聞いてください。"
     },
