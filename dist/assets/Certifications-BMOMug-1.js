@@ -1,4 +1,4 @@
-import{u as s,j as a,H as d}from"./index-bYbackMw.js";const r=(i,t="#22d3ee")=>`data:image/svg+xml;base64,${btoa(`
+import{u as s,j as a,H as d}from"./index-D-B0M1Vo.js";const r=(i,t="#22d3ee")=>`data:image/svg+xml;base64,${btoa(`
     <svg width="64" height="64" xmlns="http://www.w3.org/2000/svg">
       <rect width="64" height="64" fill="${t}" rx="14"/>
       <text x="32" y="40" font-family="Arial, sans-serif" font-size="20" font-weight="700" fill="white" text-anchor="middle">${i}</text>
