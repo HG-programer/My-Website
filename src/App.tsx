@@ -13,7 +13,7 @@ const NotFound = lazy(() => import('./pages/NotFound'));
 
 const App: React.FC = () => (
   <HelmetProvider>
-    <Router>
+    <Router basename="/My-Website">
       <Suspense fallback={<div className="p-8 text-center">Loading...</div>}>
         <Routes>
           <Route element={<Layout />}>
