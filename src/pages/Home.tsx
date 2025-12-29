@@ -32,7 +32,7 @@ const Home: React.FC = () => {
       <div className="glass p-8 rounded-2xl relative overflow-hidden">
         <div className="relative w-64 h-64 lg:w-80 lg:h-80">
           <img
-            src="/profile.jpg"
+            src={`${import.meta.env.BASE_URL}profile.jpg`}
             alt="Harshit Gupta profile"
             className="w-full h-full rounded-2xl object-cover border-4 border-cyan-400 shadow-2xl neon-glow hover:scale-105 transition-transform duration-500 relative z-10 absolute inset-0" 
             onError={(e) => {

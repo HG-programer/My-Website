@@ -25,7 +25,7 @@ const Navbar: React.FC = () => {
         >
           <div className="relative w-10 h-10">
             <img
-              src="/profile.jpg"
+              src={`${import.meta.env.BASE_URL}profile.jpg`}
               alt="Harshit Gupta"
               className="w-full h-full rounded-full object-cover border-2 border-cyan-400 shadow-lg neon-glow absolute inset-0"
               onError={(e) => {
